@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/img_Capital_Inactive.png-32d73aa1404dcd2647d801306e99de0f.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://recursos/imagenes/img_Capital_Inactive.png"
+dest_files=[ "res://.import/img_Capital_Inactive.png-32d73aa1404dcd2647d801306e99de0f.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

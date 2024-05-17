@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://escenas/minijuego/dragdrop/drop_zone.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 106.125, 105.75 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 51
+font_data = SubResource( 2 )
+
+[node name="drop_Zone" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 1 )
+
+[node name="tel" type="Sprite" parent="."]
+scale = Vector2( 0.06, 0.06 )
+
+[node name="chps" type="Label" parent="."]
+margin_left = 10.0
+margin_top = -22.0
+margin_right = 95.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+
+[connection signal="area_entered" from="." to="." method="superCrash"]

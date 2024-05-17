@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://recursos/imagenes/botones/btn_Izquierda.png" type="Texture" id=1]
+[ext_resource path="res://recursos/imagenes/botones/btn_Derecha.png" type="Texture" id=2]
+
+[node name="btnMovimiento1" type="Node2D"]
+
+[node name="izquierda" type="TouchScreenButton" parent="."]
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 1 )
+action = "ui_left"
+
+[node name="derecha" type="TouchScreenButton" parent="."]
+position = Vector2( 128, 0 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 2 )
+action = "ui_right"

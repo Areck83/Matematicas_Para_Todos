@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://recursos/botones/region_Button/btn_Region.gd" type="Script" id=5]
+
+[node name="btn_Region" type="TouchScreenButton"]
+scale = Vector2( 0.9375, 0.9375 )
+script = ExtResource( 5 )
+
+[connection signal="pressed" from="." to="." method="_btn_Region_presionado"]

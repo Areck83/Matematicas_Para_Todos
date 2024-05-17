@@ -1,0 +1,7 @@
+[UI]
+
+Alias="as"
+Edad="12"
+Masculino=true
+Femenino=false
+OptionButtonValue=1

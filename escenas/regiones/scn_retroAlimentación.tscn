@@ -1,0 +1,168 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://escenas/regiones/retroalimentacion.gd" type="Script" id=1]
+[ext_resource path="res://recursos/imagenes/reg3/bkd_Sostavento_Dim.png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagenes/botones/btn_Ancho.png" type="Texture" id=4]
+[ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=5]
+
+[sub_resource type="StyleBoxTexture" id=29]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.0862745, 0.372549, 0.513726, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.482353, 0.0784314, 0.0784314, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=22]
+size = 25
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 10
+font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFontData" id=23]
+font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-Black.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 17
+font_data = SubResource( 23 )
+
+[sub_resource type="Theme" id=24]
+default_font = SubResource( 17 )
+
+[sub_resource type="StyleBoxTexture" id=25]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 1087, 348 )
+
+[sub_resource type="DynamicFontData" id=20]
+font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-Black.ttf"
+
+[sub_resource type="DynamicFont" id=26]
+size = 45
+extra_spacing_char = 5
+extra_spacing_space = 4
+font_data = SubResource( 20 )
+
+[sub_resource type="Animation" id=27]
+resource_name = "Animacion"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 956, 340 ), Vector2( 956, 318 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 956, 301 ) ]
+}
+
+[node name="Retroalimentacion" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+escena = -1
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1941.0
+margin_bottom = 1075.0
+custom_styles/panel = SubResource( 29 )
+
+[node name="Recuardo" type="Panel" parent="Panel"]
+margin_left = 572.0
+margin_top = 561.0
+margin_right = 1326.0
+margin_bottom = 956.0
+custom_styles/panel = SubResource( 21 )
+
+[node name="Recuardo2" type="Panel" parent="Panel"]
+margin_left = 572.0
+margin_top = 561.0
+margin_right = 1324.0
+margin_bottom = 955.0
+custom_styles/panel = SubResource( 30 )
+
+[node name="Mensaje" type="Label" parent="Panel"]
+margin_left = 608.0
+margin_top = 585.0
+margin_right = 1295.0
+margin_bottom = 933.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 22 )
+text = "CAMBIO"
+align = 3
+valign = 1
+autowrap = true
+
+[node name="Aviso" type="Panel" parent="Panel/Mensaje"]
+margin_left = 119.0
+margin_top = -91.0
+margin_right = 571.0
+margin_bottom = 40.0
+theme = SubResource( 24 )
+custom_styles/panel = SubResource( 25 )
+
+[node name="MAviso" type="Label" parent="Panel/Mensaje/Aviso"]
+margin_left = 70.0
+margin_top = 45.0
+margin_right = 404.0
+margin_bottom = 94.0
+custom_colors/font_color = Color( 0.203922, 0.152941, 0.0313726, 1 )
+custom_fonts/font = SubResource( 26 )
+text = "¡Felicidades!"
+
+[node name="Siguiente" type="TouchScreenButton" parent="Panel/Mensaje"]
+position = Vector2( 882, 254 )
+scale = Vector2( 1.1627, 1.29915 )
+normal = ExtResource( 3 )
+
+[node name="Zorro" parent="Panel" instance=ExtResource( 5 )]
+position = Vector2( 956, 301 )
+scale = Vector2( 0.245765, 0.205143 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/Zorro"]
+anims/Animacion = SubResource( 27 )
+anims/RESET = SubResource( 28 )
+
+[connection signal="pressed" from="Panel/Mensaje/Siguiente" to="." method="_on_button_pressed"]

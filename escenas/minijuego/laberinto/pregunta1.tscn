@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://escenas/dialogo/dialog_Respuestas.png" type="Texture" id=1]
+[ext_resource path="res://escenas/dialogo/dialog_Ejercicio.png" type="Texture" id=2]
+[ext_resource path="res://escenas/minijuego/laberinto/pregunta1.gd" type="Script" id=3]
+[ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=4]
+[ext_resource path="res://escenas/regiones/region_2/scn_retroAlimentación.tscn" type="PackedScene" id=5]
+
+[node name="pregunta1" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 102.0
+margin_top = 276.0
+margin_right = 806.0
+margin_bottom = 594.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_right = 2505.0
+margin_bottom = 993.0
+rect_scale = Vector2( 0.283689, 0.321029 )
+texture = ExtResource( 2 )
+
+[node name="respuestaA" type="TouchScreenButton" parent="Panel"]
+position = Vector2( 180, 92 )
+scale = Vector2( 0.37844, 0.214876 )
+normal = ExtResource( 1 )
+
+[node name="Label3" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 252.0
+margin_top = 102.0
+margin_right = 399.0
+margin_bottom = 116.0
+rect_scale = Vector2( 1.21027, 2.28756 )
+text = "a.- Comparar y operar"
+align = 1
+valign = 1
+
+[node name="respuestaB" type="TouchScreenButton" parent="Panel"]
+position = Vector2( 181, 166 )
+scale = Vector2( 0.38339, 0.202479 )
+normal = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 218.0
+margin_top = 180.0
+margin_right = 396.0
+margin_bottom = 194.0
+rect_scale = Vector2( 1.47643, 1.83012 )
+text = "b.- Medir y fracturar."
+align = 1
+valign = 1
+
+[node name="respuestaC" type="TouchScreenButton" parent="Panel"]
+position = Vector2( 181, 236 )
+scale = Vector2( 0.38339, 0.213987 )
+normal = ExtResource( 1 )
+
+[node name="Label2" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 217.0
+margin_top = 247.0
+margin_right = 395.0
+margin_bottom = 261.0
+rect_scale = Vector2( 1.45977, 2.14153 )
+text = "c.- Repartir y contar"
+align = 1
+valign = 1
+
+[node name="ejercicio" type="Label" parent="Panel"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 37.0
+margin_top = 26.0
+margin_right = 581.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1.20312, 2.65932 )
+text = "Las prácticas asociadas a las fracciones que se relacionan más con el porcentaje son:"
+
+[node name="Retroalimentacion" parent="." instance=ExtResource( 5 )]
+visible = false
+margin_left = 34.0
+margin_top = 114.0
+margin_right = 34.0
+margin_bottom = 114.0
+rect_scale = Vector2( 0.49, 0.5 )
+
+[node name="btnCambiarEscena" type="TouchScreenButton" parent="Retroalimentacion"]
+position = Vector2( 1469, 872 )
+scale = Vector2( 1.2619, 1.40171 )
+normal = ExtResource( 4 )
+
+[connection signal="ready" from="." to="." method="_ready"]
+[connection signal="pressed" from="Panel/respuestaA" to="." method="_on_respuestaA_pressed"]
+[connection signal="pressed" from="Panel/respuestaB" to="." method="_on_respuestaB_pressed"]
+[connection signal="pressed" from="Panel/respuestaC" to="." method="_on_respuestaC_pressed"]

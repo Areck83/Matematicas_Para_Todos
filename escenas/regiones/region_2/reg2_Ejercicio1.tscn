@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://recursos/botones/scn_BtnCambiarEscena.tscn" type="PackedScene" id=1]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=2]
+[ext_resource path="res://escenas/dialogo/dialog_Planteamiento.png" type="Texture" id=3]
+[ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=4]
+[ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=5]
+<<<<<<< Updated upstream
+[ext_resource path="res://recursos/imagenes/reg2/tarjetas/carta_1.png" type="Texture" id=6]
+[ext_resource path="res://recursos/imagenes/indicadores/icon_Incorrecto.png" type="Texture" id=7]
+[ext_resource path="res://recursos/imagenes/indicadores/icon_Correcto.png" type="Texture" id=8]
+=======
+[ext_resource path="res://recursos/imagenes/reg2/tarjetas/tarjeta3.png" type="Texture" id=6]
+[ext_resource path="res://recursos/imagenes/dialog/dialog_Incorrecto.png" type="Texture" id=7]
+[ext_resource path="res://recursos/imagenes/dialog/dialog_Correcto.png" type="Texture" id=8]
+>>>>>>> Stashed changes
+[ext_resource path="res://recursos/imagenes/reg2/bkd_Capital_Dim.png" type="Texture" id=9]
+[ext_resource path="res://escenas/regiones/region_2/reg2_Ejercicio1.gd" type="Script" id=11]
+
+[node name="ejercicio_F_V" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="siguiente" type="TouchScreenButton" parent="CanvasLayer"]
+visible = false
+position = Vector2( 1587, 884 )
+normal = ExtResource( 5 )
+
+[node name="volver" parent="CanvasLayer" instance=ExtResource( 1 )]
+position = Vector2( 33.0001, 36.0001 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 2 )
+escena_ruta = "res://escenas/regiones/capital.tscn"
+
+[node name="DialogPlanteamiento" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 942, 121 )
+scale = Vector2( 0.334594, 0.298396 )
+texture = ExtResource( 3 )
+
+[node name="problema" type="Label" parent="CanvasLayer/DialogPlanteamiento"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -1766.56
+margin_top = -221.889
+margin_right = -1236.56
+margin_bottom = -156.889
+rect_scale = Vector2( 6.5934, 6.85125 )
+text = "Ejercicio 1.2
+En una finca de café, se ha observado que, si se siembran 120 plantas de café, 
+se obtienen 500 kg de café. ¿Cuántos kilogramos de café se obtendrían si se 
+siembran 2500 plantas de café?"
+align = 3
+valign = 1
+autowrap = true
+
+[node name="caraZorro" parent="CanvasLayer" instance=ExtResource( 4 )]
+position = Vector2( 1713, 132 )
+scale = Vector2( 0.126763, 0.117758 )
+
+[node name="fondoCapital" type="Sprite" parent="."]
+position = Vector2( 960, 539 )
+texture = ExtResource( 9 )
+
+[node name="tarjeta" type="Sprite" parent="."]
+position = Vector2( 907, 582 )
+scale = Vector2( 1.47819, 1.32707 )
+texture = ExtResource( 6 )
+
+[node name="Incorrecto" type="TouchScreenButton" parent="."]
+position = Vector2( 1416, 401 )
+scale = Vector2( 1.2, 1.2 )
+normal = ExtResource( 7 )
+
+[node name="correcto" type="TouchScreenButton" parent="."]
+position = Vector2( 1416, 602 )
+scale = Vector2( 1.2, 1.2 )
+normal = ExtResource( 8 )
+
+[connection signal="pressed" from="CanvasLayer/siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Incorrecto" to="." method="_on_Incorrecto_pressed"]
+[connection signal="pressed" from="correcto" to="." method="_on_correcto_pressed"]

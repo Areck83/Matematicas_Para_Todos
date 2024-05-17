@@ -1,0 +1,448 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://escenas/regiones/region_1/spt_Parcela.gd" type="Script" id=1]
+[ext_resource path="res://recursos/imagenes/reg1/dialogo/dialog_E_1.png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagenes/reg1/img_Parcela.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagenes/reg1/img_Arbol_Naranjo_Grande.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagenes/reg1/coutNarg.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagenes/reg1/maixito.png" type="Texture" id=6]
+[ext_resource path="res://recursos/imagenes/reg1/imzlm.png" type="Texture" id=7]
+[ext_resource path="res://recursos/imagenes/reg1/bkd_Huasteca_Fondo_Dim.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagenes/reg1/imbdv.png" type="Texture" id=9]
+[ext_resource path="res://escenas/minijuego/dragdrop/drag.tscn" type="PackedScene" id=10]
+[ext_resource path="res://recursos/imagenes/reg1/icma.png" type="Texture" id=11]
+[ext_resource path="res://recursos/imagenes/reg1/imnach.png" type="Texture" id=12]
+[ext_resource path="res://recursos/imagenes/reg1/cnch.png" type="Texture" id=13]
+[ext_resource path="res://escenas/minijuego/dragdrop/drop_zone.tscn" type="PackedScene" id=15]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=16]
+
+[node name="Parcela" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="bkd_Fondo_Dim" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource( 8 )
+
+[node name="img_Parcela" type="TextureRect" parent="."]
+show_behind_parent = true
+light_mask = 2
+margin_top = 1386.0
+margin_right = 1462.0
+margin_bottom = 2923.0
+rect_rotation = -90.0
+mouse_filter = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 3 )
+expand = true
+
+[node name="ag1" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 209, 491 )
+dpt = "asdn"
+dst = "agnd"
+saus = ExtResource( 4 )
+dtp = "nrnj"
+dts = "asnd"
+
+[node name="ag2" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 710, 429 )
+dpt = "asdn"
+dst = "agnd"
+saus = ExtResource( 4 )
+dtp = "nrnj"
+dts = "asnd"
+
+[node name="ag3" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 334, 830 )
+dpt = "asdn"
+dst = "agnd"
+saus = ExtResource( 4 )
+dtp = "nrnj"
+dts = "asnd"
+
+[node name="mmc1" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 184, 754 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc2" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 183, 925 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc3" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 327, 564 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc4" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 578, 419 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc5" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 612, 547 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc6" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 831, 504 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc7" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1253, 338 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc8" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1367, 416 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc9" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1185, 453 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc10" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1146, 603 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc11" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 667, 686 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc12" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 904, 774 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc13" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 874, 886 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc14" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 554, 957 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc15" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1035, 697 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc16" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1371, 777 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmc17" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1041, 940 )
+dpt = "cmiaf"
+dst = "cmaix"
+saus = ExtResource( 6 )
+dtp = "mzml"
+dts = "gastr"
+
+[node name="mmb1" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 151, 349 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb2" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 283, 340 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb3" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 309, 700 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb4" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 481, 816 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb5" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 823, 393 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb6" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 721, 547 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb7" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 938, 561 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb8" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 975, 347 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb9" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1116, 343 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb10" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1072, 489 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb11" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1381, 537 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb12" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1363, 654 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb13" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 652, 797 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb14" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 819, 670 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb15" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 660, 906 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb16" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 767, 785 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb17" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 763, 921 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb18" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1370, 890 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb19" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1263, 965 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb20" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1240, 747 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb21" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1037, 812 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="mmb22" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1153, 964 )
+dpt = "bmbd"
+dst = "cmaib"
+saus = ExtResource( 9 )
+dtp = "mzbn"
+dts = "mbnn"
+
+[node name="nj1" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 464, 689 )
+dpt = "carb"
+dst = "cnarc"
+saus = ExtResource( 12 )
+dtp = "njch"
+dts = "niche"
+
+[node name="nj2" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 451, 453 )
+dpt = "carb"
+dst = "cnarc"
+saus = ExtResource( 12 )
+dtp = "njch"
+dts = "niche"
+
+[node name="nj3" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 961, 458 )
+dpt = "carb"
+dst = "cnarc"
+saus = ExtResource( 12 )
+dtp = "njch"
+dts = "niche"
+
+[node name="nj4" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1253, 556 )
+dpt = "carb"
+dst = "cnarc"
+saus = ExtResource( 12 )
+dtp = "njch"
+dts = "niche"
+
+[node name="nj5" parent="." groups=["drag"] instance=ExtResource( 10 )]
+position = Vector2( 1161, 850 )
+dpt = "carb"
+dst = "cnarc"
+saus = ExtResource( 12 )
+dtp = "njch"
+dts = "niche"
+
+[node name="agnd" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1814, 680 )
+ktn = "nrnj"
+sus = ExtResource( 5 )
+
+[node name="cnarc" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1586, 682 )
+ktn = "njch"
+sus = ExtResource( 13 )
+
+[node name="cmaib" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1815, 455 )
+ktn = "mzbn"
+sus = ExtResource( 11 )
+
+[node name="cmaix" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1590, 455 )
+ktn = "mzml"
+sus = ExtResource( 7 )
+
+[node name="Dialog" type="TextureRect" parent="."]
+margin_left = 214.0
+margin_top = 6.0
+margin_right = 1946.0
+margin_bottom = 246.0
+texture = ExtResource( 2 )
+
+[node name="menu" type="TouchScreenButton" parent="."]
+position = Vector2( 50, 50 )
+scale = Vector2( 0.07, 0.07 )
+normal = ExtResource( 16 )

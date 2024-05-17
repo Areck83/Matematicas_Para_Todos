@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://escenas/regiones/develope.gd" type="Script" id=1]
+[ext_resource path="res://recursos/imagenes/icon_Salir.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagenes/zorro/img_Zorro_Alegre.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagenes/reg3/bkd_Sostavento.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxTexture" id=26]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.984314, 0.694118, 0.231373, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.0156863, 0, 0, 1 )
+
+[sub_resource type="DynamicFontData" id=25]
+font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-SemiBold.ttf"
+
+[sub_resource type="DynamicFont" id=28]
+size = 80
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 25 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -87.0 ]
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1928.0
+margin_bottom = 1074.0
+custom_styles/panel = SubResource( 26 )
+
+[node name="Confirmacion" type="Panel" parent="."]
+anchor_right = 0.008
+margin_left = 583.0
+margin_top = 439.0
+margin_right = 1469.64
+margin_bottom = 903.0
+rect_pivot_offset = Vector2( -1467, -163 )
+custom_styles/panel = SubResource( 27 )
+
+[node name="Mensaje" type="Label" parent="Confirmacion"]
+margin_left = 45.0
+margin_top = 67.0
+margin_right = 853.0
+margin_bottom = 466.0
+custom_fonts/font = SubResource( 28 )
+text = "Tienes que jugar la regíon 2 primero, presiona \"x\" para regresar"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -20, 151 )
+scale = Vector2( 0.302315, 0.3 )
+texture = ExtResource( 4 )
+offset = Vector2( 3466.45, 511.209 )
+
+[node name="exit" type="TouchScreenButton" parent="."]
+position = Vector2( 67.9999, 15 )
+scale = Vector2( 0.100463, 0.112963 )
+normal = ExtResource( 3 )
+
+[connection signal="pressed" from="exit" to="." method="condicion"]

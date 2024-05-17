@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://recursos/imagenes/zorro/img_Zorro_Alegre.png" type="Texture" id=1]
+[ext_resource path="res://recursos/imagenes/reg2/bkd_Capital_Dim.png" type="Texture" id=2]
+[ext_resource path="res://recursos/botones/scn_BtnCambiarEscena.tscn" type="PackedScene" id=3]
+[ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagenes/reg2/felicidades.png" type="Texture" id=6]
+[ext_resource path="res://escenas/regiones/region_2/obsoleto/spt_retroalimentacionObsoleto.gd" type="Script" id=7]
+[ext_resource path="res://recursos/imagenes/zorro/img_Zorro_Triste.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 956, 301 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "triste"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 956, 340 ), Vector2( 956, 301 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 956, 340 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "alegre"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 956, 340 ), Vector2( 956, 318 ) ]
+}
+
+[node name="retroalimentacion" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="fondoCapital" type="Sprite" parent="."]
+position = Vector2( 957, 542 )
+texture = ExtResource( 2 )
+
+[node name="ZorroTriste" type="Sprite" parent="."]
+visible = false
+position = Vector2( 956, 301 )
+scale = Vector2( 0.257, 0.231 )
+texture = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ZorroTriste"]
+anims/RESET = SubResource( 3 )
+anims/triste = SubResource( 4 )
+
+[node name="ZorroAlegre" type="Sprite" parent="."]
+visible = false
+position = Vector2( 956, 340 )
+scale = Vector2( 0.257407, 0.231481 )
+texture = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ZorroAlegre"]
+anims/RESET = SubResource( 1 )
+anims/alegre = SubResource( 2 )
+
+[node name="volver" parent="." instance=ExtResource( 3 )]
+position = Vector2( 33.0001, 36.0001 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="siguiente" type="TouchScreenButton" parent="."]
+position = Vector2( 1571, 901 )
+normal = ExtResource( 5 )
+
+[node name="Felicidades" type="Sprite" parent="."]
+position = Vector2( 957.5, 757 )
+scale = Vector2( 2.24332, 2.50747 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Felicidades"]
+margin_left = -88.4849
+margin_top = 12.363
+margin_right = 97.5151
+margin_bottom = 26.363
+autowrap = true
+
+[connection signal="pressed" from="siguiente" to="." method="_on_siguiente_pressed"]

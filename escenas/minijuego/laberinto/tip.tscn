@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://escenas/minijuego/laberinto/tip.gd" type="Script" id=1]
+[ext_resource path="res://escenas/minijuego/laberinto/globo.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 14 )
+
+[node name="tip" type="Area2D"]
+script = ExtResource( 1 )
+width = 68
+height = 57
+
+[node name="globo" parent="." instance=ExtResource( 2 )]
+width = 68
+height = 57
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 65 )
+shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.5
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_tip_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_tip_body_exited"]
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
+[connection signal="tween_started" from="Tween" to="." method="_on_Tween_tween_started"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

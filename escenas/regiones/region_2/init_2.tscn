@@ -1,0 +1,122 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://escenas/regiones/region_2/scn_retroAlimentación.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=2]
+[ext_resource path="res://recursos/imagenes/indicadores/icon_Correcto.png" type="Texture" id=3]
+[ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=4]
+[ext_resource path="res://recursos/imagenes/reg3/tarjetas/1A1.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagenes/reg3/arrowLeft.png" type="Texture" id=6]
+[ext_resource path="res://escenas/regiones/region_2/spt_Ejercicio.gd" type="Script" id=7]
+[ext_resource path="res://recursos/imagenes/indicadores/dialog_Planteamiento.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagenes/indicadores/icon_Incorrecto.png" type="Texture" id=9]
+[ext_resource path="res://recursos/imagenes/reg2/bkd_Capital_Dim.png" type="Texture" id=10]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=11]
+[ext_resource path="res://escenas/mapa/scn_Mapa_Selector.tscn" type="PackedScene" id=12]
+[ext_resource path="res://recursos/botones/scn_BtnCambiarEscena.tscn" type="PackedScene" id=13]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 3896, 541 )
+
+[sub_resource type="DynamicFontData" id=6]
+hinting = 1
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = SubResource( 6 )
+
+[node name="Ejercicio" type="Control"]
+margin_right = 1922.0
+margin_bottom = 1073.0
+script = ExtResource( 7 )
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource( 1 )
+margin_top = 1.0
+margin_right = 1919.0
+margin_bottom = 1074.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Cuadro" type="CanvasLayer" parent="Panel"]
+
+[node name="AnimatedSprite" parent="Panel/Cuadro" instance=ExtResource( 2 )]
+position = Vector2( 1787.15, 114.892 )
+scale = Vector2( 0.1119, 0.103804 )
+
+[node name="Fondo" type="Panel" parent="Panel/Cuadro"]
+margin_left = 257.0
+margin_top = 30.0
+margin_right = 1686.0
+margin_bottom = 186.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Title" type="Label" parent="Panel/Cuadro"]
+margin_left = 290.0
+margin_top = 50.0
+margin_right = 1607.0
+margin_bottom = 117.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Ejercicio 1.1
+"
+autowrap = true
+
+[node name="Texto" type="Label" parent="Panel/Cuadro"]
+margin_left = 295.0
+margin_top = 86.0
+margin_right = 1522.0
+margin_bottom = 151.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "TEXTO"
+autowrap = true
+
+[node name="tsb_Continuar" type="TouchScreenButton" parent="Panel/Cuadro"]
+visible = false
+position = Vector2( 1540, 89 )
+scale = Vector2( 0.0388889, 0.037037 )
+normal = ExtResource( 6 )
+
+[node name="Falso" type="TouchScreenButton" parent="Panel"]
+position = Vector2( 1743, 596 )
+scale = Vector2( 0.793388, 0.772727 )
+normal = ExtResource( 9 )
+
+[node name="Verdadero" type="TouchScreenButton" parent="Panel"]
+position = Vector2( 1742, 474 )
+scale = Vector2( 0.785123, 0.786259 )
+normal = ExtResource( 3 )
+
+[node name="EjercicioT1" type="Sprite" parent="Panel"]
+position = Vector2( 980, 590.5 )
+scale = Vector2( 2.32843, 2.35127 )
+texture = ExtResource( 5 )
+
+[node name="Retroalimentacion" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="btnCambiarEscena" type="TouchScreenButton" parent="Retroalimentacion"]
+position = Vector2( 1469, 872 )
+scale = Vector2( 1.2619, 1.40171 )
+normal = ExtResource( 4 )
+
+[node name="volver" parent="." instance=ExtResource( 13 )]
+position = Vector2( 20, 12 )
+scale = Vector2( 0.1, 0.1 )
+escena_destino = ExtResource( 12 )
+imagen = ExtResource( 11 )
+
+[connection signal="pressed" from="Panel/Cuadro/tsb_Continuar" to="." method="_on_tsb_Continuar_pressed"]
+[connection signal="pressed" from="Panel/Falso" to="." method="_on_Falso_pressed"]
+[connection signal="pressed" from="Panel/Verdadero" to="." method="_button"]
+[connection signal="pressed" from="Panel/Verdadero" to="." method="_on_Verdadero_pressed"]
+[connection signal="pressed" from="Retroalimentacion/btnCambiarEscena" to="Retroalimentacion/btnCambiarEscena" method="_BtnCambiarEscena_presionado"]
