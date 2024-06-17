@@ -17,3 +17,7 @@ func falpa():
 	if tote == 0:
 		get_tree().change_scene("res://escenas/regiones/region_1/eje1_1.tscn")
 	pass
+
+func _shixas():
+	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
+	pass

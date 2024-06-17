@@ -446,3 +446,5 @@ texture = ExtResource( 2 )
 position = Vector2( 50, 50 )
 scale = Vector2( 0.07, 0.07 )
 normal = ExtResource( 16 )
+
+[connection signal="pressed" from="menu" to="." method="_shixas"]

@@ -59,19 +59,21 @@ margin_right = 1178.0
 margin_bottom = 637.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
-text = "¡FELICIDADES!"
+text = "¡EXCELENTE!"
 
 [node name="txtxas" type="RichTextLabel" parent="."]
-margin_left = 498.0
-margin_top = 644.0
-margin_right = 1593.0
-margin_bottom = 917.0
+margin_left = 448.0
+margin_top = 649.0
+margin_right = 1543.0
+margin_bottom = 922.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/bold_font = SubResource( 6 )
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
-bbcode_text = "Acabas de resolver un [b]problema[/b] en el que se hace presente la práctica de [b]contar[/b], éste ayuda a entender el significado de la [b]fracción[/b] como [b]parte de un todo[/b]. "
-text = "Acabas de resolver un problema en el que se hace presente la práctica de contar, éste ayuda a entender el significado de la fracción como parte de un todo. "
+bbcode_text = "Resolviste un [b]problema[/b] en el que se hace presente la práctica de [b]repartir[/b], éste ayuda a entender el significado de la [b]fracción[/b] como un [b]reparto equitativo[/b]. "
+text = "Resolviste un problema en el que se hace presente la práctica de repartir, éste ayuda a entender el significado de la fracción como un reparto equitativo. "
+fit_content_height = true
+scroll_active = false
 
 [connection signal="pressed" from="menu" to="." method="_qop"]
 [connection signal="pressed" from="sig" to="." method="_qap"]
