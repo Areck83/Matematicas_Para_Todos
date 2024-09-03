@@ -28,6 +28,6 @@ func actualizar_escena():
 func _on_button_pressed():
 	$Panel.visible = false
 
-	
+		
 
 

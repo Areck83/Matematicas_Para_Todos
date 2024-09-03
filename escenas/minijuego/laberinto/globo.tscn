@@ -3,7 +3,6 @@
 [ext_resource path="res://escenas/minijuego/laberinto/globo.gd" type="Script" id=1]
 [ext_resource path="res://escenas/dialogo/dialog_Respuestas.png" type="Texture" id=2]
 
-
 [node name="globo" type="Node2D"]
 script = ExtResource( 1 )
 

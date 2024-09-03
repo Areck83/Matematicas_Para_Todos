@@ -9,6 +9,8 @@ onready var respuestaA = $Panel/Label3
 onready var respuestaB = $Panel/Label
 onready var respuestaC = $Panel/Label2
 
+#onready var ca = $caraZorro
+
 var mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
 var mensaje_correcto = "EXCELENTE SIGUE ASI"
 
@@ -80,10 +82,12 @@ func _on_respuestaA_pressed():
 		print("la respuesta es: ", status)
 		#GlobalVar.ejercicio +=1
 		$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
+		
 		$Retroalimentacion.actualizar_escena()
 	else:
 		$Retroalimentacion.escena = status
 		$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
+		
 		$Retroalimentacion.actualizar_escena()
 	aumentarEjercicio()
 	
@@ -109,11 +113,13 @@ func _on_respuestaB_pressed():
 		status = 0
 		$Retroalimentacion.escena = status
 		$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
+		
 		$Retroalimentacion.actualizar_escena()
 		#GlobalVar.respuesta = 0
 	else:
 		$Retroalimentacion.escena = status
 		$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
+		
 		$Retroalimentacion.actualizar_escena()
 	#get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
 	aumentarEjercicio()
@@ -138,12 +144,14 @@ func _on_respuestaC_pressed():
 		status = 0
 		$Retroalimentacion.escena = status
 		$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
-		$Retroalimentacion.actualizar_escena()
+		
+		#$Retroalimentacion.actualizar_escena()
 		#GlobalVar.respuesta = 0
 	else:
 		$Retroalimentacion.escena = status
 		$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
-		$Retroalimentacion.actualizar_escena()
+		
+		#$Retroalimentacion.actualizar_escena()
 	#get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
 	#print("respuesta: "+str(GlobalVar.respuesta))
 	GlobalVar.respuesta = 0
@@ -166,14 +174,17 @@ func cambiar_escena():
 	print("el ejercicio es: ", GlobalVar.ejercicio)
 	if GlobalVar.ejercicio == 2:
 		#scene_path = "res://escenas/minijuego/laberinto/laberinto2.tscn"
-		get_tree().change_scene("res://escenas/minijuego/laberinto/laberinto2.tscn")
+		
+		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab2.tscn")
 	elif GlobalVar.ejercicio == 3:
 		#scene_path = "res://escenas/minijuego/laberinto/laberinto3.tscn"
-		get_tree().change_scene("res://escenas/minijuego/laberinto/laberinto3.tscn")
+		
+		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab3.tscn")
 	else:
 		#scene_path = "res://escenas/regiones/region_2/scn_Reg_2.tscn"
 		GlobalVar.ejercicio=1
-		get_tree().change_scene("res://escenas/regiones/region_2/scn_Reg_2.tscn")
+		
+		get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 	
 	#var resource = ResourceLoader.load(scene_path)
 	#if resource:

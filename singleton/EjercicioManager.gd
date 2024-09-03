@@ -209,40 +209,40 @@ func escenaEjercicioRegion2(numero_ejercicio, ejercicioT1):
 	match numero_ejercicio:
 		1:
 			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
-			mensaje_correcto = "EXCELENTE SIGUE ASI"
-			dialogo = ["1.- En una finca de café, se ha observado que, si se siembran 1000 plantas de café, se obtienen 500 kg café. ¿Cuántos kilogramos de café se obtendrían si se siembran 2500 plantas de café?"]
+			mensaje_correcto = "Para resolver un problema de proporcionalidad puedes aplicar la regla de tres, estableciendo relaciones entre las cantidades que se relacionan proporcionalmente"
+			dialogo = ["En una finca de café, se ha observado que, si se siembran 1000 plantas de café, se obtienen 500 kg café. ¿Cuántos kilogramos de café se obtendrían si se siembran 2500 plantas de café?"]
 			respuesta = true
 			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta1.png"
 		2:
 			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
-			mensaje_correcto = "EXCELENTE SIGUE ASI"
-			dialogo = ["1.- En una finca de café, se ha observado que, si se siembran 1000 plantas de café, se obtienen 500 kg café. ¿Cuántos kilogramos de café se obtendrían si se siembran 2500 plantas de café?"]
-			respuesta = false
-			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta2.png"
-		3:
-			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
-			mensaje_correcto = "EXCELENTE SIGUE ASI"
-			dialogo = ["1.- En una finca de café, se ha observado que, si se siembran 1000 plantas de café, se obtienen 500 kg café. ¿Cuántos kilogramos de café se obtendrían si se siembran 2500 plantas de café?"]
+			mensaje_correcto = "Para resolver un problema de proporcionalidad puedes aplicar la regla de tres, estableciendo relaciones entre las cantidades que se relacionan proporcionalmente"
+			dialogo = ["En una finca de café, se ha observado que, si se siembran 1000 plantas de café, se obtienen 500 kg café. ¿Cuántos kilogramos de café se obtendrían si se siembran 2500 plantas de café?"]
 			respuesta = true
 			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta3.png"
+		3:
+			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
+			mensaje_correcto = "Para resolver un problema de porcentaje puedes utilizar la simplificación de fracciones y la multiplicación 100"
+			dialogo = ["En una finca de café, 2/8 de las plantas dan como fruto café caturra. Si sabe que hay 500 plantas de café, ¿Cuál es el porcentaje y el número de plantas que corresponden a este tipo de café?"]
+			respuesta = true
+			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta7.png"
 		4:
 			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
-			mensaje_correcto = "EXCELENTE SIGUE ASI"
-			dialogo = ["2.- En una finca de café, se requieren 3 litros de agua por cada 5 plantas de café sembradas, para regarlas cuadamente. Si en la finca hay 2000 plantas de café, ¿cuántos litros de agua se necesitarán?"]
-			respuesta = true
-			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta4.png"
+			mensaje_correcto = "Identificaste que el procedimiento sugerido se realiza de forma incorrecta al establecer las relaciones de proporción para calcular el porcentaje"
+			dialogo = ["En una finca de café, 2/8 de las plantas dan como fruto café caturra. Si sabe que hay 500 plantas de café, ¿Cuál es el porcentaje y el número de plantas que corresponden a este tipo de café?"]
+			respuesta = false
+			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta8.png"
 		5:
 			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
-			mensaje_correcto = "EXCELENTE SIGUE ASI"
-			dialogo = ["2.- En una finca de café, se requieren 3 litros de agua por cada 5 plantas de café sembradas, para regarlas cuadamente. Si en la finca hay 2000 plantas de café, ¿cuántos litros de agua se necesitarán?"]
+			mensaje_correcto = "Identificaste que para resolver un problema de porcentaje puedes utilizar la simplificación de fracciones y la multiplicación por 100"
+			dialogo = ["En una finca de café en Xalapa, se encontró que 2/10 de los días del año el café presenta una calidad regular o deficiente. Si hay 365 días en un año, ¿Qué porcentaje de días del año el café tiene una calidad regular o deficiente?"]
 			respuesta = true
-			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta5.png"
+			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta12.png"
 		6:
 			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
 			mensaje_correcto = "EXCELENTE SIGUE ASI"
-			dialogo = ["2.- En una finca de café, se requieren 3 litros de agua por cada 5 plantas de café sembradas, para regarlas cuadamente. Si en la finca hay 2000 plantas de café, ¿cuántos litros de agua se necesitarán?"]
-			respuesta = false
-			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta6.png"
+			dialogo = ["Se ha detectado que, en un lote de café de la feria, hay 5 bolsas con café Arábigo, 3 bolsas con café Robusta y 2 bolsas con café caturra. Si se sabe que al menos una de las bolsas extraídas es de café arábigo ¿cuál es la probabilidad expresada en fracciones de obtener dos bolsas de café arábigo?"]
+			respuesta = true
+			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta13.png"
 		#7:
 		#	mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
 		#	mensaje_correcto = "EXCELENTE SIGUE ASI"

@@ -1,0 +1,7 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://recursos/botones/scn_BtnCambiarEscena.tscn" type="PackedScene" id=1]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=2]
+[ext_resource path="res://escenas/dialogo/dialog_Planteamiento.png" type="Texture" id=3]
+[ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=4]
+[ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=5]

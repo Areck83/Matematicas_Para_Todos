@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://recursos/imagenes/reg2/descripcion.png" type="Texture" id=1]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagenes/reg2/bkd_Capital.png" type="Texture" id=3]
+[ext_resource path="res://recursos/botones/scn_BtnCambiarEscena.tscn" type="PackedScene" id=4]
+[ext_resource path="res://recursos/imagenes/botones/btn_Siguiente.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=6]
+[ext_resource path="res://recursos/imagenes/img_Capital_Active.png" type="Texture" id=7]
+[ext_resource path="res://escenas/mapa/scn_Mapa_Selector.tscn" type="PackedScene" id=8]
+[ext_resource path="res://escenas/regiones/region_2/scn_ejercicio_base.tscn" type="PackedScene" id=9]
+
+[node name="capital" type="Node2D"]
+
+[node name="fondoCapital" type="Sprite" parent="."]
+light_mask = 0
+position = Vector2( 962.5, 540 )
+scale = Vector2( 1.00156, 1 )
+texture = ExtResource( 3 )
+
+[node name="Descripcion" type="Sprite" parent="."]
+position = Vector2( -1492, -94.9999 )
+scale = Vector2( 0.958595, 1.40665 )
+texture = ExtResource( 1 )
+offset = Vector2( 3002.31, 596.986 )
+
+[node name="Label" type="Label" parent="Descripcion"]
+margin_left = 2688.31
+margin_top = 490.527
+margin_right = 3003.31
+margin_bottom = 589.527
+rect_scale = Vector2( 1.99869, 2.08607 )
+text = "En la región capital entre los principales cultivos 
+que abundan se encuentra el maíz, el café y la 
+caña. En este interactivo te enfrentarás a retos 
+relacionados con la siembra y el cultivo del café. 
+A continuación, te mostraremos un ejemplo de 
+lo que realizaras a lo largo de este."
+align = 3
+
+[node name="fondoColor" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1409, 245 )
+scale = Vector2( 0.394369, 0.369444 )
+texture = ExtResource( 3 )
+
+[node name="ImgCapitalActive" type="Sprite" parent="."]
+position = Vector2( 553.449, 477.25 )
+scale = Vector2( 0.338379, 0.33912 )
+texture = ExtResource( 7 )
+
+[node name="nombre" type="Sprite" parent="."]
+position = Vector2( 1388.75, 527 )
+scale = Vector2( 0.421854, 0.401146 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="nombre"]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = -240.455
+margin_top = -69.952
+margin_right = -187.455
+margin_bottom = -55.952
+rect_scale = Vector2( 9.94105, 9.59698 )
+text = "Capital"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="volver" parent="." instance=ExtResource( 4 )]
+position = Vector2( 15, 8 )
+scale = Vector2( 0.1, 0.1 )
+escena_destino = ExtResource( 8 )
+imagen = ExtResource( 2 )
+
+[node name="siguiente" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1566, 895 )
+escena_destino = ExtResource( 9 )
+imagen = ExtResource( 6 )
