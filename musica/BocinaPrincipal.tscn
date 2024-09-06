@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://musica/BocinaPrincipal.gd" type="Script" id=1]
+
+[node name="BocinaPrincipal" type="AudioStreamPlayer"]
+script = ExtResource( 1 )

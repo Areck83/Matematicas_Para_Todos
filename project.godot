@@ -32,6 +32,7 @@ RegionesData="*res://singleton/regiones_Data.gd"
 GlobalVar="*res://singleton/global_var.gd"
 FunBuilder="*res://singleton/FunBuilder.gd"
 EjercicioManager="*res://singleton/EjercicioManager.gd"
+BocinaPrincipal="*res://musica/BocinaPrincipal.gd"
 
 [display]
 

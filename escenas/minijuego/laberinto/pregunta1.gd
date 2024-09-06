@@ -183,7 +183,7 @@ func cambiar_escena():
 	else:
 		#scene_path = "res://escenas/regiones/region_2/scn_Reg_2.tscn"
 		GlobalVar.ejercicio=1
-		
+		BocinaPrincipal.para()
 		get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 	
 	#var resource = ResourceLoader.load(scene_path)

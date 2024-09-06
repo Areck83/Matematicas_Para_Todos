@@ -37,6 +37,7 @@ func _ready():
 	fon.visible = true
 	tit.visible = true
 	txt.visible = true
+	BocinaPrincipal.repro()
 	#$Panel/tsb_Siguiente.connect("pressed", self, "_on_tsb_Siguiente_pressed")
 	#$Panel/tsb_Atras.connect("pressed", self, "_on_tsb_Atras_pressed")
 	#connect("ejercicio_actualizado", self, "_on_ejercicio_actualizado")
