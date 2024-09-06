@@ -1,12 +1,9 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenas/regiones/region_2/spt_retroalimentacion.gd" type="Script" id=2]
 [ext_resource path="res://recursos/imagenes/botones/btn_Ancho.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagenes/reg2/bkd_Capital_Dim.png" type="Texture" id=4]
-[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=5]
-[ext_resource path="res://escenas/mapa/scn_Mapa_Selector.tscn" type="PackedScene" id=6]
-[ext_resource path="res://recursos/botones/scn_BtnCambiarEscena.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StyleBoxTexture" id=29]
 texture = ExtResource( 4 )
@@ -160,9 +157,3 @@ scale = Vector2( 0.245765, 0.205143 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/Zorro"]
 anims/Animacion = SubResource( 27 )
 anims/RESET = SubResource( 28 )
-
-[node name="volver" parent="." instance=ExtResource( 7 )]
-position = Vector2( 20, 12 )
-scale = Vector2( 0.1, 0.1 )
-escena_destino = ExtResource( 6 )
-imagen = ExtResource( 5 )

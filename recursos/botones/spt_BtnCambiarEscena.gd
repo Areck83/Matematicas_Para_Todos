@@ -12,6 +12,7 @@ func _ready():
 		print("Imagen no cargada en el boton!")
 
 func _btn_presionado():
+	BocinaPrincipal.para()
 	if not escena_destino:
 		print("No se ha asignado nada como escena de destino!")
 		return
