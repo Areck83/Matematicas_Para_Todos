@@ -28,6 +28,8 @@ func _on_ejercicio_actualizado(nuevo_ejercicio):
 	print("El ejercicio se ha actualizado a:", nuevo_ejercicio)
 
 func _ready():
+	tit.text = "Ejercicio"
+	$volver.visible = false
 	cambiarEjercicio(ejercicio)
 	print("ESTAMOS EN ESTE EJERCICIO: ", ejercicio)
 	label_dialogo = current_panel2.get_node("Texto")
