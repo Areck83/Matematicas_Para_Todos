@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/error-incorrecta-incorrecta-respuesta-.mp3-613a5ec94ffdd33438bcfd33e9a97dff.mp3str"
+
+[deps]
+
+source_file="res://recursos/sonidos/musica/Efectos varios/error-incorrecta-incorrecta-respuesta-.mp3"
+dest_files=[ "res://.import/error-incorrecta-incorrecta-respuesta-.mp3-613a5ec94ffdd33438bcfd33e9a97dff.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

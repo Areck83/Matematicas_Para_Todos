@@ -1,16 +1,20 @@
 extends Area2D
-export (String) var ktn: String
-export (Texture) var sus: Texture
-var bills = 0
+
+export (String) var contenido: String
+export (Texture) var imagen: Texture
+
+var conteo = 0
+
 func _ready():
 	set_process(true)
 	set_physics_process(true)
-	$chps.text = String(bills)
-	if sus:
-		$tel.texture = sus
+	$contador.text = String(conteo)
+	if imagen:
+		$icono.texture = imagen
 pass
-func superCrash(coso):
-	if coso.is_in_group(ktn):
-		bills += 1
-		$chps.text = String(bills)
+
+func objExtColisiona(area):
+	if area.is_in_group(contenido):
+		conteo += 1
+		$contador.text = String(conteo)
 pass

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/level up.mp3-9a8c2308dd7e81a1f001246342e242ec.mp3str"
+
+[deps]
+
+source_file="res://recursos/sonidos/musica/Efectos varios/level up.mp3"
+dest_files=[ "res://.import/level up.mp3-9a8c2308dd7e81a1f001246342e242ec.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

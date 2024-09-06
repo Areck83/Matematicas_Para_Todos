@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "Carta",
+"language": "GDScript",
+"path": "res://escenas/regiones/region_3/memoramaReg3/carta.gd"
+}, {
+"base": "Node2D",
 "class": "btnCambiarEscena",
 "language": "GDScript",
 "path": "res://recursos/botones/spt_BtnCambiarEscena.gd"
 } ]
 _global_script_class_icons={
+"Carta": "",
 "btnCambiarEscena": ""
 }
 
@@ -33,6 +39,8 @@ GlobalVar="*res://singleton/global_var.gd"
 FunBuilder="*res://singleton/FunBuilder.gd"
 EjercicioManager="*res://singleton/EjercicioManager.gd"
 BocinaPrincipal="*res://musica/BocinaPrincipal.gd"
+TarjetasManager="*res://singleton/TarjetasManager.gd"
+Song3="*res://escenas/regiones/region_3/song3.tscn"
 
 [display]
 

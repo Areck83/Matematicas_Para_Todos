@@ -158,13 +158,7 @@ func EjercicioRegion3(numero_ejercicio):
 
 			
 		16:
-			var raiz_escena = get_tree().get_root()
-			for i in range(raiz_escena.get_child_count()):
-				var nodo = raiz_escena.get_child(i)
-				nodo.queue_free()
-
-		#	Cargar la escena inicial del juego nuevamente
-			var escena_inicial_path = "res://escenas/regiones/scn_developMessage.tscn"
+			var escena_inicial_path = "res://escenas/regiones/region_3/dragdropReg3/parcela_Test.tscn"
 			get_tree().change_scene(escena_inicial_path) 
 	
 	var resultado = {"dialogo": dialogo, "ejercicio": ejercicio, "respuesta": respuesta, "mensaje_correcto": mensaje_correcto, "mensaje_incorrecto": mensaje_incorrecto}

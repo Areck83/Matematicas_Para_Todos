@@ -1,58 +1,63 @@
 extends Node2D
-var garbanzo = false
-var nixt: String
-var zamab : Vector2
-export (String) var dpt: String
-export (String) var dst: String
-export (Texture) var saus: Texture
-export (String) var dtp: String
-export (String) var dts: String
+
+export (String) var contenedorDestino: String
+export (String) var tipo: String
+export (Texture) var imagen: Texture
+onready var click = $icono/Area2D/
+var seleccionado = false
+var punto_fijo : Vector2
 
 func _ready():
+	click.connect("clicked", self, "_on_clicked")
 	set_process(true)
 	set_physics_process(true)
-	
-	if saus:
-		$i.texture = saus
+	#Borrar los else cuando se hayan hecho las pruebas y ya estén en producción
+	if imagen:
+		$icono.texture = imagen
 	else:
-		print ("no sau")
+		print ("Falta la asignación de una imagen al objeto de arrastre")
 	
-	if dtp:
-		$i/Area2D.add_to_group(dtp)
+	if tipo:
+		$icono/Area2D.add_to_group(tipo)
 	else:
-		print("no stp")
+		print("No se ha asignado un grupo al objeto de arrastre. Es posible que no colisone")
 	
-	zamab = global_position
-	var nix = get_node("i/Area2D")
-	if nix:
-		nix.connect("input_event", self, "_on_Area2D_input_event")
+	punto_fijo = global_position
+	var area = get_node("icono/Area2D")
+	if area:
+		area.connect("input_event", self, "_on_Area2D_input_event")
 	else:
-		print("Bruh momento")
+		print("Error: Nodo no encontrado")
 pass
 
-func _neoyap():
-	if garbanzo:
-		print("Ok")
-	pass
-
 func _physics_process(delta):
-	if garbanzo:
+	if seleccionado:
 		global_position = lerp(global_position, get_global_mouse_position(), 25*delta)
 	else:
-		global_position = lerp(global_position, zamab, 10*delta)
+		global_position = lerp(global_position, punto_fijo, 10*delta)
 pass
 
 func _on_Area2D_input_event(_viewport, event, _shape_idx):
 	if event is InputEventScreenTouch:
-		var tta = event as InputEventScreenTouch
-		if tta.pressed:
-			garbanzo = true
-		elif not tta.is_pressed():
-			garbanzo = false
+		var touch = event as InputEventScreenTouch
+		if touch.pressed:
+			if not $descubrir.visible:  # Solo permitir selección si no está visible
+				$descubrir.visible = true
+				$descubrir.z_index = 100 
+				seleccionado = true
+		elif not touch.is_pressed() and seleccionado:
+			# Evitar soltar mientras 'descubrir' es visible
+			return
+	pass
+
+
+func _on_Area2D_area_entered(area):
+	if area.name==contenedorDestino:
+		self.queue_free()
+		SignalManager.emit_signal("dragEliminado")
+		seleccionado = false  # Reiniciar el estado
 pass
 
-func _on_Area2D_area_entered(sus):
-	if sus.name==dst:
-		self.queue_free()
-		SignalManager.emit_signal("dreex")
-pass
+func _on_clicked():
+	emit_signal("clicked", self)
+	

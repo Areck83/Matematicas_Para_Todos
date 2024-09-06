@@ -1,11 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://escenas/minijuego/dragdrop/drag.tscn" type="PackedScene" id=1]
 [ext_resource path="res://recursos/imagenes/reg1/bkd_Huasteca_Fondo_Dim.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagenes/reg1/img_Parcela.png" type="Texture" id=3]
 [ext_resource path="res://escenas/minijuego/dragdrop/drop_zone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://recursos/imagenes/reg1/icon_Conteo_Arbol_Naranjo.png" type="Texture" id=5]
+[ext_resource path="res://recursos/imagenes/reg1/img_Arbol_Naranjo_Grande.png" type="Texture" id=6]
 [ext_resource path="res://escenas/minijuego/dragdrop/test/parcela_Test.gd" type="Script" id=7]
-[ext_resource path="res://recursos/imagenes/reg1/dialogo/dialog_E_1.png" type="Texture" id=10]
+[ext_resource path="res://recursos/imagenes/reg1/img_Maiz_Malo.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagenes/reg1/icon_Conteo_Maiz_Malo.png" type="Texture" id=9]
+[ext_resource path="res://escenas/dialogo/scn_Indicaciones.tscn" type="PackedScene" id=10]
 [ext_resource path="res://escenas/minijuego/dragdrop/test/ejercicio_1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://recursos/imagenes/reg1/icon_Vaso_2.png" type="Texture" id=12]
 [ext_resource path="res://recursos/imagenes/reg1/icon_Vaso_3.png" type="Texture" id=13]
@@ -39,24 +43,45 @@ expand = true
 
 [node name="contenedor_ArbolN" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1622, 359 )
+contenido = "arbolNaranjo"
+imagen = ExtResource( 5 )
 
 [node name="arbolGrande1" parent="." groups=["drag"] instance=ExtResource( 1 )]
 position = Vector2( 209, 491 )
+contenedorDestino = "contenedor_ArbolN"
+tipo = "arbolNaranjo"
+imagen = ExtResource( 6 )
 
 [node name="arbolGrande2" parent="." groups=["drag"] instance=ExtResource( 1 )]
 position = Vector2( 706, 471 )
+contenedorDestino = "contenedor_ArbolN"
+tipo = "arbolNaranjo"
+imagen = ExtResource( 6 )
 
 [node name="arbolGrande3" parent="." groups=["drag"] instance=ExtResource( 1 )]
 position = Vector2( 334, 830 )
+contenedorDestino = "contenedor_ArbolN"
+tipo = "arbolNaranjo"
+imagen = ExtResource( 6 )
 
 [node name="maizMalo1" parent="." groups=["drag"] instance=ExtResource( 1 )]
 position = Vector2( 186, 914 )
+contenedorDestino = "contenedor_MaizM"
+tipo = "maizMalo"
+imagen = ExtResource( 8 )
 
 [node name="maizMalo2" parent="." groups=["drag"] instance=ExtResource( 1 )]
 position = Vector2( 198, 734 )
+contenedorDestino = "contenedor_MaizM"
+tipo = "maizMalo"
+imagen = ExtResource( 8 )
 
 [node name="contenedor_MaizM" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1623, 606 )
+contenido = "maizMalo"
+imagen = ExtResource( 9 )
+
+[node name="Indicacion" parent="." instance=ExtResource( 10 )]
 
 [node name="ejercicio1_1" parent="." instance=ExtResource( 11 )]
 visible = false
@@ -69,10 +94,3 @@ imagen_relleno_1 = ExtResource( 16 )
 imagen_relleno_2 = ExtResource( 12 )
 imagen_relleno_3 = ExtResource( 13 )
 imagen_relleno_4 = ExtResource( 15 )
-
-[node name="Dialogo" type="TextureRect" parent="."]
-margin_left = 216.0
-margin_top = 9.0
-margin_right = 1948.0
-margin_bottom = 249.0
-texture = ExtResource( 10 )

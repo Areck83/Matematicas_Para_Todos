@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/error-fallo 4.mp3-f824a0430489e7dc025cf84d32b2b0f3.mp3str"
+
+[deps]
+
+source_file="res://recursos/sonidos/musica/Efectos varios/error-fallo 4.mp3"
+dest_files=[ "res://.import/error-fallo 4.mp3-f824a0430489e7dc025cf84d32b2b0f3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

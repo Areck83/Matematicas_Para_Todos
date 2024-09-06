@@ -1,0 +1,169 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://escenas/minijuego/dragdrop/drag.tscn" type="PackedScene" id=1]
+[ext_resource path="res://recursos/imagenes/reg3/bkd_Sostavento_Dim.png" type="Texture" id=2]
+[ext_resource path="res://escenas/regiones/region_3/dragdropReg3/drag.gd" type="Script" id=3]
+[ext_resource path="res://escenas/minijuego/dragdrop/drop_zone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/regiones/region_3/dragdropReg3/drop_zone.gd" type="Script" id=5]
+[ext_resource path="res://recursos/imagenes/reg3/cd_PezYellow2.png" type="Texture" id=6]
+[ext_resource path="res://escenas/regiones/region_3/dragdropReg3/parcela_Test.gd" type="Script" id=7]
+[ext_resource path="res://recursos/imagenes/reg3/cd_PezRed2.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagenes/reg3/cd_PezOrange.png" type="Texture" id=9]
+[ext_resource path="res://escenas/dialogo/scn_Indicaciones.tscn" type="PackedScene" id=10]
+[ext_resource path="res://recursos/imagenes/reg3/tarjetasInfo/pezInfo_5.png" type="Texture" id=11]
+[ext_resource path="res://recursos/imagenes/reg3/Red1.png" type="Texture" id=12]
+[ext_resource path="res://recursos/imagenes/reg3/cd_PezRed.png" type="Texture" id=13]
+[ext_resource path="res://recursos/imagenes/reg3/Red2.png" type="Texture" id=14]
+[ext_resource path="res://recursos/imagenes/reg3/cd_PezYellow.png" type="Texture" id=15]
+[ext_resource path="res://recursos/imagenes/reg3/tarjetasInfo/pezInfo_1.png" type="Texture" id=16]
+[ext_resource path="res://recursos/imagenes/reg3/tarjetasInfo/pezInfo_2.png" type="Texture" id=17]
+[ext_resource path="res://recursos/imagenes/reg3/tarjetasInfo/pezInfo_4.png" type="Texture" id=18]
+[ext_resource path="res://recursos/imagenes/reg3/tarjetasInfo/pezInfo_6.png" type="Texture" id=19]
+[ext_resource path="res://recursos/imagenes/reg3/tarjetasInfo/pezInfo_3.png" type="Texture" id=20]
+[ext_resource path="res://recursos/imagenes/reg3/cd_PezBlueYellow.png" type="Texture" id=21]
+[ext_resource path="res://recursos/imagenes/reg3/Red3.png" type="Texture" id=22]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=23]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-SemiBold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_color = Color( 0.25098, 0.0156863, 0.0156863, 1 )
+font_data = SubResource( 1 )
+
+[node name="Parcela_Test" type="Node2D"]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+contenedorDestino = "simplificacion"
+
+[node name="fondo" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+
+[node name="RelacionEquivalencia" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1497, 330 )
+scale = Vector2( 1.2, 1.1 )
+script = ExtResource( 5 )
+contenido = "RELACION-EQUIVALENCIA"
+imagen = ExtResource( 14 )
+
+[node name="NumeroNatural" parent="." instance=ExtResource( 4 )]
+position = Vector2( 954, 330 )
+scale = Vector2( 1.2, 1.1 )
+script = ExtResource( 5 )
+contenido = "NUMERO-NATURAL"
+imagen = ExtResource( 12 )
+
+[node name="Simplificacion" parent="." instance=ExtResource( 4 )]
+position = Vector2( 407, 330 )
+scale = Vector2( 1.2, 1.1 )
+script = ExtResource( 5 )
+contenido = "SIMPLIFICACION"
+imagen = ExtResource( 22 )
+
+[node name="pez1" parent="." groups=["drag"] instance=ExtResource( 1 )]
+position = Vector2( 400, 600 )
+script = ExtResource( 3 )
+contenedorDestino = "Simplificacion"
+tipo = "SIMPLIFICACION"
+imagen = ExtResource( 13 )
+
+[node name="descubrir" type="Sprite" parent="pez1"]
+visible = false
+position = Vector2( 5, 50 )
+scale = Vector2( 0.0893126, 0.0980625 )
+texture = ExtResource( 16 )
+
+[node name="pez2" parent="." groups=["drag"] instance=ExtResource( 1 )]
+position = Vector2( 950, 600 )
+script = ExtResource( 3 )
+contenedorDestino = "NumeroNatural"
+tipo = "NUMERO-NATURAL"
+imagen = ExtResource( 9 )
+
+[node name="descubrir" type="Sprite" parent="pez2"]
+visible = false
+position = Vector2( 5, 50 )
+scale = Vector2( 0.0893126, 0.0980625 )
+texture = ExtResource( 17 )
+
+[node name="pez3" parent="." groups=["drag"] instance=ExtResource( 1 )]
+position = Vector2( 1500, 600 )
+script = ExtResource( 3 )
+contenedorDestino = "RelacionEquivalencia"
+tipo = "RELACION-EQUIVALENCIA"
+imagen = ExtResource( 21 )
+
+[node name="descubrir" type="Sprite" parent="pez3"]
+visible = false
+position = Vector2( 5, 50 )
+scale = Vector2( 0.0893126, 0.0980625 )
+texture = ExtResource( 20 )
+
+[node name="pez4" parent="." groups=["drag"] instance=ExtResource( 1 )]
+position = Vector2( 400, 900 )
+script = ExtResource( 3 )
+contenedorDestino = "NumeroNatural"
+tipo = "NUMERO-NATURAL"
+imagen = ExtResource( 6 )
+
+[node name="descubrir" type="Sprite" parent="pez4"]
+visible = false
+position = Vector2( 5, 50 )
+scale = Vector2( 0.0893126, 0.0980625 )
+texture = ExtResource( 18 )
+
+[node name="pez5" parent="." groups=["drag"] instance=ExtResource( 1 )]
+position = Vector2( 950, 900 )
+script = ExtResource( 3 )
+contenedorDestino = "RelacionEquivalencia"
+tipo = "RELACION-EQUIVALENCIA"
+imagen = ExtResource( 8 )
+
+[node name="descubrir" type="Sprite" parent="pez5"]
+visible = false
+position = Vector2( 5, 50 )
+scale = Vector2( 0.0893126, 0.0980625 )
+texture = ExtResource( 11 )
+
+[node name="pez6" parent="." groups=["drag"] instance=ExtResource( 1 )]
+position = Vector2( 1500, 900 )
+script = ExtResource( 3 )
+contenedorDestino = "Simplificacion"
+tipo = "SIMPLIFICACION"
+imagen = ExtResource( 15 )
+
+[node name="descubrir" type="Sprite" parent="pez6"]
+visible = false
+position = Vector2( 5, 50 )
+scale = Vector2( 0.0893126, 0.0980625 )
+texture = ExtResource( 19 )
+
+[node name="Indicacion" parent="." instance=ExtResource( 10 )]
+scale = Vector2( 0.9, 0.8 )
+transform = Transform2D( 0.9, 0, 0, 0.8, 0, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Indicacion"]
+margin_left = 404.444
+margin_top = 91.25
+margin_right = 1056.44
+margin_bottom = 151.25
+custom_colors/font_color = Color( 0.360784, 0.00784314, 0.00784314, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Desafio de conexiones"
+
+[node name="volver" type="TouchScreenButton" parent="."]
+position = Vector2( 37, 23 )
+scale = Vector2( 0.0856481, 0.0921296 )
+normal = ExtResource( 23 )
+
+[connection signal="pressed" from="volver" to="." method="volver"]

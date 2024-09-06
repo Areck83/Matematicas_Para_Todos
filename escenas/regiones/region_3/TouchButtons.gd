@@ -10,11 +10,14 @@ extends TouchScreenButton
 func _ready():
 	pass # Replace with function body.
 func _region3():
-	if GlobalVar.ejercicioTarjetas2 >= 3:
-		get_tree().change_scene("res://escenas/regiones/region_3/scn_TarjetasReg3.tscn")
-		GlobalVar.ejercicioTarjetas = 1
-	else:
-		get_tree().change_scene("res://escenas/regiones/region_3/scn_developCondicion.tscn")
+		Song3.play()
+		get_tree().change_scene("res://escenas/regiones/region_3/memoramaReg3/principal.tscn")
+		if GlobalVar.ejercicioTarjetas >= 6:
+			get_tree().change_scene("res://escenas/regiones/region_3/scn_TarjetasReg3.tscn")
+		if GlobalVar.contDrag == 0:
+			print("contDrag actual:", GlobalVar.contDrag) 
+			get_tree().change_scene("res://escenas/regiones/region_3/escenaFinalReg3.tscn")
+		
 		
 func _region2():
 	if GlobalVar.ejercicioTarjetas >= 1:

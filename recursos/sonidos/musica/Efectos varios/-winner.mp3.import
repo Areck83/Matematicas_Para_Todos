@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/-winner.mp3-9a2593bdee36bb5e35df64e1bb3b0457.mp3str"
+
+[deps]
+
+source_file="res://recursos/sonidos/musica/Efectos varios/-winner.mp3"
+dest_files=[ "res://.import/-winner.mp3-9a2593bdee36bb5e35df64e1bb3b0457.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

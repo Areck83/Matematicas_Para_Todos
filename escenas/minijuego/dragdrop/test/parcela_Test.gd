@@ -1,6 +1,7 @@
 extends Node2D
 
-var c: int = 0
+#Viene siendo el total de arboles
+var contDrag: int = 0
 onready var narpeq_calc: LineEdit
 
 func _ready():
@@ -12,23 +13,23 @@ func _ready():
 	
 	#Ver total de arboles automaticamente
 	for drag in get_tree().get_nodes_in_group("drag"):
-		c += 1
+		contDrag += 1
 	
 	#Eliminar en prod
-	print("No. de Escenas drag actuales: "+String(c))
+	print("No. de Escenas drag actuales: "+String(contDrag))
 	
 	#Prevencion de errores no dados por el editor
-	if c <= 0:
+	if contDrag <= 0:
 		print("Asegurarse de poner las escenas drag en el grupo drag")
 	else:
 		SignalManager.connect("dragEliminado", self, "contarDrags")
 	pass
 
 func contarDrags():
-	c -= 1
-	if c == 1:
+	contDrag -= 1
+	if contDrag == 1:
 		print("queda 1")
-	if c == 0:
+	if contDrag == 0:
 		print("Se acabaron las escenas")
 		mostrarPreguntas()
 

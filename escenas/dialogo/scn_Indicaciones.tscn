@@ -1,0 +1,82 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://escenas/dialogo/dialog_Planteamiento.png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagenes/zorro/img_Zorro_Normal.png" type="Texture" id=3]
+[ext_resource path="res://escenas/dialogo/spt_Indicaciones.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-ExtraBold.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 43
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-ExtraBoldItalic.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 36
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-MediumItalic.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 36
+font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 36
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 36
+font_data = SubResource( 12 )
+
+[node name="Indicacion" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="globo_Texto" type="TextureRect" parent="."]
+margin_left = 344.0
+margin_top = 19.0
+margin_right = 1640.0
+margin_bottom = 231.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="titulo" type="Label" parent="."]
+margin_left = 222.0
+margin_top = 27.0
+margin_right = 693.0
+margin_bottom = 79.0
+custom_colors/font_color = Color( 0.427451, 0.2, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+autowrap = true
+
+[node name="texto" type="RichTextLabel" parent="."]
+margin_left = 220.0
+margin_top = 69.0
+margin_right = 1598.0
+margin_bottom = 228.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/bold_italics_font = SubResource( 7 )
+custom_fonts/italics_font = SubResource( 9 )
+custom_fonts/bold_font = SubResource( 11 )
+custom_fonts/normal_font = SubResource( 13 )
+bbcode_enabled = true
+fit_content_height = true
+deselect_on_focus_loss_enabled = false
+
+[node name="icono_Zorro" type="TextureRect" parent="."]
+margin_left = 1630.0
+margin_top = -24.0
+margin_right = 1941.0
+margin_bottom = 287.0
+texture = ExtResource( 3 )
+expand = true

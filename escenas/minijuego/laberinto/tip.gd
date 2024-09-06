@@ -26,7 +26,7 @@ func _draw():
 	
 func _on_tip_body_entered(body):
 	accion = MOSTRANDO
-	tween.interpolate_method(self,"resize",0,1,0.5,Tween.TRANS_BOUNCE)
+	tween.interpolate_method(self,"resize",0,1,1.0,Tween.TRANS_BOUNCE)
 	tween.start()
 	
 func _on_tip_body_exited(body):

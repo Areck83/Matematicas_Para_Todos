@@ -4,7 +4,8 @@ func _ready():
 	pass
 
 func _ttt():
-	get_tree().change_scene("res://escenas/regiones/scn_developMessage.tscn")
+	get_tree().change_scene("res://escenas/regiones/region_3/memoramaReg3/principal.tscn")
+	Song3.play()
 	pass
 
 func _ttttt():

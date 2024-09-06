@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/HOME 2.mp3-cda26684b8db25caa4a056ae78b55271.mp3str"
+
+[deps]
+
+source_file="res://recursos/sonidos/musica/Menú pricipal (Home)/HOME 2.mp3"
+dest_files=[ "res://.import/HOME 2.mp3-cda26684b8db25caa4a056ae78b55271.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/subir-nivel.mp3-fa255d3ff26f0f19ec8b5939b73a5218.mp3str"
+
+[deps]
+
+source_file="res://recursos/sonidos/musica/Efectos varios/subir-nivel.mp3"
+dest_files=[ "res://.import/subir-nivel.mp3-fa255d3ff26f0f19ec8b5939b73a5218.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

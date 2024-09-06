@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/correct-ding .mp3-1a51cc43e39b56b8b6c3d0accb5155f4.mp3str"
+
+[deps]
+
+source_file="res://recursos/sonidos/musica/Efectos varios/correct-ding .mp3"
+dest_files=[ "res://.import/correct-ding .mp3-1a51cc43e39b56b8b6c3d0accb5155f4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

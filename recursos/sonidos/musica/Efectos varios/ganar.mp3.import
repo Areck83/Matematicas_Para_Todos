@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ganar.mp3-e14a504541fd8ce9b1b37dc6fb60607a.mp3str"
+
+[deps]
+
+source_file="res://recursos/sonidos/musica/Efectos varios/ganar.mp3"
+dest_files=[ "res://.import/ganar.mp3-e14a504541fd8ce9b1b37dc6fb60607a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

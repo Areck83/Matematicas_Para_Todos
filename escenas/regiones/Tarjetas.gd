@@ -96,6 +96,9 @@ func mostrar_respuesta_incorrecta():
 	GlobalVar.mensajeRetroalimentacion = mensaje_texto_incorrecto
 	get_tree().change_scene("res://escenas/regiones/scn_retroAlimentación.tscn")
 
+func volver():
+	Song3.stop()
+	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 
 
