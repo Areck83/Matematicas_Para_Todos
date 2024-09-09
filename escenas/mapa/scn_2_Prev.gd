@@ -5,6 +5,7 @@ func _ready():
 
 func _qq():
 	get_tree().change_scene("res://escenas/regiones/region_2/init_2.tscn")
+	BocinaPrincipal.repro()
 	pass
 
 func _q():

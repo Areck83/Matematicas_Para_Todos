@@ -117,6 +117,6 @@ imagen = ExtResource( 11 )
 
 [connection signal="pressed" from="Panel/Cuadro/tsb_Continuar" to="." method="_on_tsb_Continuar_pressed"]
 [connection signal="pressed" from="Panel/Falso" to="." method="_on_Falso_pressed"]
-[connection signal="pressed" from="Panel/Verdadero" to="." method="_on_Verdadero_pressed"]
 [connection signal="pressed" from="Panel/Verdadero" to="." method="_button"]
+[connection signal="pressed" from="Panel/Verdadero" to="." method="_on_Verdadero_pressed"]
 [connection signal="pressed" from="Retroalimentacion/btnCambiarEscena" to="Retroalimentacion/btnCambiarEscena" method="_BtnCambiarEscena_presionado"]
