@@ -4,6 +4,10 @@ extends Node
 var puntos =0
 var ejercicio = 1
 var respuesta = 0
+var esnRetro=null
+var msgRetro=""
+var ejeTarjeta = 1
+
 var ejercicioTarjetas = 1
 var escenaRetroalimentacion = null
 var mensajeRetroalimentacion = ""

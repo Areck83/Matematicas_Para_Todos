@@ -1,7 +1,9 @@
 extends Node2D
 
+var mensaje_texto_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
+var mensaje_texto_correcto = "EXCELENTE SIGUE ASI"
 var ejer = 0
-var status = 1
+#var status = 1
 var is_paused = true setget set_is_paused
 var mostrado = false
 onready var ejercicio = $Panel/ejercicio
@@ -21,7 +23,7 @@ func _ready():
 	$Panel.hide()
 	_cambiar()
 	
-	$Retroalimentacion/btnCambiarEscena.connect("pressed", self, "cambiar_escena")
+	#$Retroalimentacion/btnCambiarEscena.connect("pressed", self, "cambiar_escena")
 	#print("preg ready respuesta: "+str(GlobalVar.respuesta))
 	#print("puntos: "+str(GlobalVar.puntos))
 	#print("ejercicio: "+str(GlobalVar.ejercicio))
@@ -75,19 +77,25 @@ func _on_respuestaA_pressed():
 	self.is_paused = false
 	if GlobalVar.ejercicio == 1:
 		#GlobalVar.puntos += 1
-		status = 0
-		$Retroalimentacion.escena = status
-		print("la respuesta es: ", status)
+		#status = 0
+		#$Retroalimentacion.escena = status
+		GlobalVar.esnRetro = 0
+		print("la respuesta es: ", GlobalVar.esnRetro)
 		#GlobalVar.ejercicio +=1
-		$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
-		$Retroalimentacion.actualizar_escena()
+		#$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
+		GlobalVar.msgRetro = mensaje_texto_correcto
+		#$Retroalimentacion.actualizar_escena()
+		get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
 	else:
-		$Retroalimentacion.escena = status
-		$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
-		$Retroalimentacion.actualizar_escena()
+		#$Retroalimentacion.escena = status
+		GlobalVar.esnRetro = 1
+		#$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
+		GlobalVar.msgRetro = mensaje_texto_incorrecto
+		#$Retroalimentacion.actualizar_escena()
+		get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
 	aumentarEjercicio()
 	
-	$Retroalimentacion.visible = true
+	#$Retroalimentacion.visible = true
 	
 	#$Retroalimentacion.actualizar_escena()
 	
@@ -95,7 +103,7 @@ func _on_respuestaA_pressed():
 	#$Retroalimentacion/btnCambiarEscena.connect("pressed", self, "cambiar_escena")
 	GlobalVar.respuesta = 0
 	#GlobalVar.puntos = 0
-	print("el estatus es: ", status)
+	#print("el estatus es: ", status)
 
 	#print("puntos: "+str(GlobalVar.puntos))
 	#print("ejercicio: "+str(GlobalVar.ejercicio))
@@ -106,24 +114,29 @@ func _on_respuestaB_pressed():
 	if GlobalVar.ejercicio == 3:
 		GlobalVar.puntos += 1
 		#GlobalVar.ejercicio +=1
-		status = 0
-		$Retroalimentacion.escena = status
-		$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
-		$Retroalimentacion.actualizar_escena()
-		#GlobalVar.respuesta = 0
+		#status = 0
+		GlobalVar.esnRetro = 0
+		print("la respuesta es: ", GlobalVar.esnRetro)
+		#GlobalVar.ejercicio +=1
+		#$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
+		GlobalVar.msgRetro = mensaje_texto_correcto
+		#$Retroalimentacion.actualizar_escena()
+		get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
 	else:
-		$Retroalimentacion.escena = status
-		$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
-		$Retroalimentacion.actualizar_escena()
-	#get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
+		#$Retroalimentacion.escena = status
+		GlobalVar.esnRetro = 1
+		#$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
+		GlobalVar.msgRetro = mensaje_texto_incorrecto
+		#$Retroalimentacion.actualizar_escena()
+		get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
 	aumentarEjercicio()
 	
-	$Retroalimentacion.visible = true
+	#$Retroalimentacion.visible = true
 
 	#$Retroalimentacion.actualizar_escena()
 	GlobalVar.respuesta = 0
 	#GlobalVar.puntos = 0
-	print("el estatus es: ", status)
+	#print("el estatus es: ", status)
 
 	#print("puntos: "+str(GlobalVar.puntos))
 	#print("ejercicio: "+str(GlobalVar.ejercicio))
@@ -135,16 +148,20 @@ func _on_respuestaC_pressed():
 	if GlobalVar.ejercicio == 2:
 		GlobalVar.puntos += 1
 		#GlobalVar.ejercicio +=1
-		status = 0
-		$Retroalimentacion.escena = status
-		$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
-		$Retroalimentacion.actualizar_escena()
-		#GlobalVar.respuesta = 0
+		GlobalVar.esnRetro = 0
+		print("la respuesta es: ", GlobalVar.esnRetro)
+		#GlobalVar.ejercicio +=1
+		#$Retroalimentacion/Panel/Mensaje.text = mensaje_correcto
+		GlobalVar.msgRetro = mensaje_texto_correcto
+		#$Retroalimentacion.actualizar_escena()
+		get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
 	else:
-		$Retroalimentacion.escena = status
-		$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
-		$Retroalimentacion.actualizar_escena()
-	#get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
+		#$Retroalimentacion.escena = status
+		GlobalVar.esnRetro = 1
+		#$Retroalimentacion/Panel/Mensaje.text = mensaje_incorrecto
+		GlobalVar.msgRetro = mensaje_texto_incorrecto
+		#$Retroalimentacion.actualizar_escena()
+		get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
 	#print("respuesta: "+str(GlobalVar.respuesta))
 	GlobalVar.respuesta = 0
 
@@ -152,28 +169,28 @@ func _on_respuestaC_pressed():
 	#print("puntos: "+str(GlobalVar.puntos))
 	aumentarEjercicio()
 	
-	$Retroalimentacion.visible = true
+	#$Retroalimentacion.visible = true
 
 	#$Retroalimentacion.actualizar_escena()
-	print("el estatus es: ", status)
+	#print("el estatus es: ", status)
 	#pass # Replace with function body.
 
 
 
-func cambiar_escena():
+#func cambiar_escena():
 	#aumentarEjercicio()
 	#var scene_path = ""
-	print("el ejercicio es: ", GlobalVar.ejercicio)
-	if GlobalVar.ejercicio == 2:
+#	print("el ejercicio es: ", GlobalVar.ejercicio)
+#	if GlobalVar.ejercicio == 2:
 		#scene_path = "res://escenas/minijuego/laberinto/laberinto2.tscn"
-		get_tree().change_scene("res://escenas/minijuego/laberinto/laberinto2.tscn")
-	elif GlobalVar.ejercicio == 3:
+#		get_tree().change_scene("res://escenas/minijuego/laberinto/laberinto2.tscn")
+#	elif GlobalVar.ejercicio == 3:
 		#scene_path = "res://escenas/minijuego/laberinto/laberinto3.tscn"
-		get_tree().change_scene("res://escenas/minijuego/laberinto/laberinto3.tscn")
-	else:
+#		get_tree().change_scene("res://escenas/minijuego/laberinto/laberinto3.tscn")
+#	else:
 		#scene_path = "res://escenas/regiones/region_2/scn_Reg_2.tscn"
-		GlobalVar.ejercicio=1
-		get_tree().change_scene("res://escenas/regiones/region_2/scn_Reg_2.tscn")
+#		GlobalVar.ejercicio=1
+#		get_tree().change_scene("res://escenas/regiones/region_2/scn_Reg_2.tscn")
 	
 	#var resource = ResourceLoader.load(scene_path)
 	#if resource:
@@ -182,4 +199,3 @@ func cambiar_escena():
 	#else:
 	#	print("No se pudo cargar la escena:", scene_path)
 	#$Retroalimentacion.visible = false
-

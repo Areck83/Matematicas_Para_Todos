@@ -15,7 +15,7 @@ onready var txt = $Panel/Cuadro/Texto
 var indice_dialogo = 0
 var label_dialogo
 var respuesta 
-var ejercicio = 1
+var ejercicio = GlobalVar.ejeTarjeta
 var dialogos = []
 
 func aumentarEjercicio() -> int:
@@ -28,6 +28,8 @@ func _on_ejercicio_actualizado(nuevo_ejercicio):
 	print("El ejercicio se ha actualizado a:", nuevo_ejercicio)
 
 func _ready():
+	$Panel/Cuadro.visible = false
+	$Panel/Cuadro.visible = true
 	tit.text = "Ejercicio"
 	$volver.visible = false
 	cambiarEjercicio(ejercicio)
@@ -42,7 +44,7 @@ func _ready():
 	
 	#$Panel/tsb_Siguiente.connect("pressed", self, "_on_tsb_Siguiente_pressed")
 	#$Panel/tsb_Atras.connect("pressed", self, "_on_tsb_Atras_pressed")
-	#connect("ejercicio_actualizado", self, "_on_ejercicio_actualizado")
+	connect("ejercicio_actualizado", self, "_on_ejercicio_actualizado")
 
 
 func cambiarEjercicio(ejercicio):
@@ -61,62 +63,49 @@ func _on_tsb_Continuar_pressed():
 
 func _on_Verdadero_pressed():
 	if respuesta == true:
+		print("V respuesta es igual a true")
 		if status == Status.Correcto:
+			print("V el estatus es correcto ->", status)
 			mostrar_respuesta_correcta()
 	elif respuesta == false:
+		print("Vf respuesta es igual a false")
 		if status == Status.Correcto:
 			status = 1
+			print("Vf el estatus es correcto ->", status)
 			mostrar_respuesta_incorrecta()
 
 func _on_Falso_pressed():
 	if respuesta == false:
+		print("F respuesta es igual a true")
 		if status == Status.Correcto:
+			print("F el estatus es correcto ->", status)
 			mostrar_respuesta_correcta()
 	elif respuesta == true:
+		print("Ff respuesta es igual a true")
 		if status == Status.Correcto:
 			status = 1
+			print("Ff el estatus es correcto ->", status)
 			mostrar_respuesta_incorrecta()
 
 func mostrar_respuesta_correcta():
-	$Retroalimentacion.visible = true
-	$Retroalimentacion.escena = status
-	$Retroalimentacion.actualizar_escena()
-	$Retroalimentacion/Panel/Mensaje.text = mensaje_texto_correcto
-	#yield(get_tree().create_timer(2.0), "timeout")
-	$Panel/Cuadro.visible = false
-	$Retroalimentacion/btnCambiarEscena.connect("pressed", self, "reiniciar_escena")
-	$Panel/Cuadro.visible = true
+	aumentarEjercicio()
+	GlobalVar.ejeTarjeta = ejercicio
+	GlobalVar.esnRetro = 0
+	GlobalVar.msgRetro = mensaje_texto_correcto
+	print("respuesta correcta ", GlobalVar.ejeTarjeta)
+	get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
+	
 
 func mostrar_respuesta_incorrecta():
-	$Retroalimentacion.visible = true
-	$Retroalimentacion.escena = status
-	$Retroalimentacion.actualizar_escena()
-	$Retroalimentacion/Panel/Mensaje.text = mensaje_texto_incorrecto
-	#yield(get_tree().create_timer(2.0), "timeout")
-	$Panel/Cuadro.visible = false
-	$Retroalimentacion/btnCambiarEscena.connect("pressed", self, "reiniciar_escena")
-	$Panel/Cuadro.visible = true
-
-func reiniciar_escena():
 	aumentarEjercicio()
-	if ejercicio >= 7:
-		cuad.visible = false
-		fon.visible = false
-		tit.visible = false
-		txt.visible = false
-		print(" opcion de reinicio ESTAMOS EN ESTE EJERCICIO: ", ejercicio)
-	if ejercicio == 6:
-		cuad.visible = false
-		fon.visible = false
-		tit.visible = false
-		txt.visible = false
-		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab.tscn")
-	if ejercicio <6:
-		var scene_path = "res://escenas/regiones/region_2/scn_ejercicio_base.tscn"
-		var new_scene = load(scene_path).instance()
-		new_scene.ejercicio = ejercicio
-		get_tree().get_root().add_child(new_scene)
-		#get_tree().reload_current_scene()
-	
+	GlobalVar.ejeTarjeta = ejercicio
+	GlobalVar.esnRetro = 1
+	GlobalVar.msgRetro = mensaje_texto_incorrecto
+	print("respuesta incorrecta: ", GlobalVar.ejeTarjeta)
+	get_tree().change_scene("res://escenas/regiones/region_2/scn_retroAlimentación.tscn")
+
+func volver():
+	BocinaPrincipal.stop()
+	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 
