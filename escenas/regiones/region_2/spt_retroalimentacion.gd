@@ -47,6 +47,7 @@ func _on_button_pressed():
 	if GlobalVar.ejercicio >= 4:
 		#scene_path = "res://escenas/regiones/region_2/scn_Reg_2.tscn"
 		GlobalVar.ejercicio=1
+		BocinaPrincipal.para()
 		get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 
