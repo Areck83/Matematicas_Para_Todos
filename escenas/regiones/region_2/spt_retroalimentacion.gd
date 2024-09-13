@@ -48,6 +48,7 @@ func _on_button_pressed():
 		#scene_path = "res://escenas/regiones/region_2/scn_Reg_2.tscn"
 		GlobalVar.ejercicio=1
 		BocinaPrincipal.para()
+		GlobalVar.ejeTarjeta = 1
 		get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 

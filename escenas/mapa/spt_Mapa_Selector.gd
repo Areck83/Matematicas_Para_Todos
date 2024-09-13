@@ -5,6 +5,7 @@ func _ready():
 	GlobalVar.puntos = 0
 	GlobalVar.ejercicio = 1
 	GlobalVar.respuesta = 0
+	GlobalVar.ejeTarjeta = 1
 	pass
 
 func alakazam(w):

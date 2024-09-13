@@ -106,6 +106,7 @@ func mostrar_respuesta_incorrecta():
 
 func volver():
 	BocinaPrincipal.stop()
+	GlobalVar.ejeTarjeta = 1
 	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 
