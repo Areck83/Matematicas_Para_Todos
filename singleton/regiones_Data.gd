@@ -12,20 +12,75 @@ var regionesVeracruz = [
 	"Región Tuxtla",
 	"Region Olmeca"
 	]
-var municipiosPorRegion = {	
-	0: ["Chamal","Chiconamel", "Chinampa de Gorostiza", "El Higo", "Naranjos Amatlán", "Ozuluama de Mascareñas", "Pánuco", "Platón Sánchez", "Pueblo Viejo", "Tamalín", "Tamiahua", "Tampico Alto", "Tantima", "Tantoyuca", "Tempoal"],
-	1: ["Álamo Temapache", "Benito Juárez **", "Castillo de Teayo", "Cerro Azul", "Chicontepec", "Chontla", "Citlaltépetl", "Huayacocotla", "Ilamatlán", "Ixcatepec", "Ixhuatlán de Madero", "Tancoco", "Tepetzintla", "Texcatepec", "Tlachichilco", "Tuxpan", "Zacualpan", "Zontecomatlán de López y Fuentes "],
-	2: ["Cazones de Herrera", "Chumatlán", "Coahuitlán", "Coatzintla", "Coxquihui", "Coyutla", "Espinal", "Filomeno Mata", "Gutiérrez Zamora", "Mecatlán", "Papantla", "Poza Rica de Hidalgo", "Tecolutla", "Tihuatlán", "Zozocolco de Hidalgo"],
-	3: ["Atzalan", "Colipa", "Juchique de Ferrer", "Martínez de la Torre", "Misantla", "Nautla", "San Rafael", "Tenochtitlán", "Tlapacoyan", "Vega de Alatorre", "Yecuatla"],
-	4: ["Acajete", "Acatlán", "Actopan", "Alto Lucero de Gutiérrez Barrios", "Altotonga", "Apazapan", "Ayahualulco", "Banderilla", "Chiconquiaco", "Coacoatzintla", "Coatepec", "Cosautlán de Carvajal", "Emiliano Zapata", "Ixhuacán de los Reyes", "Jalacingo", "Jalcomulco", "Jilotepec", "Landero y Coss", "Las Minas", "Las Vigas de Ramírez", "Miahuatlán", "Naolinco", "Perote", "Rafael Lucio","Xalapa", "Xico"],
-	5: ["Acultzingo", "Alpatláhuac", "Amatlán de los Reyes", "Aquila", "Astacinga", "Atlahuilco", "Atoyac", "Atzacan", "Calcahualco", "Camarón de Tejeda", "Camerino Z. Mendoza", "Córdoba", "Coscomatepec", "Los Reyes", "Magdalena", "Maltrata",  "Omealca", "Orizaba", "Paso del Macho", "Rafael Delgado", "Río Blanco", "San Andrés Tenejapan", "Tequila", "Boca del Río", "Veracruz"],
-	#4: ["Acajete", "Acatlán", "Actopan", "Alto Lucero de Gutiérrez Barrios", "Altotonga", "Apazapan", "Ayahualulco", "Banderilla", "Chiconquiaco", "Coacoatzintla", "Coatepec", "Cosautlán de Carvajal", "Emiliano Zapata", "Ixhuacán de los Reyes", "Jalacingo", "Jalcomulco", "Jilotepec", "Landero y Coss", "Las Minas", "Las Vigas de Ramírez", "Miahuatlán", "Naolinco", "Perote", "Rafael Lucio", "Tatatila", "Teocelo", "Tepetlán", "Tlacolulan", "Tlalnelhuayocan", "Tonayán", "Villa Aldama", "Xalapa", "Xico"],
-	#5: ["Acultzingo", "Alpatláhuac", "Amatlán de los Reyes", "Aquila", "Astacinga", "Atlahuilco", "Atoyac", "Atzacan", "Calcahualco", "Camarón de Tejeda", "Camerino Z. Mendoza", "Carrillo Puerto", "Chocamán", "Coetzala", "Comapa", "Córdoba", "Coscomatepec", "Cuichapa", "Cuitláhuac", "Fortín", "Huatusco", "Huiloapan de Cuauhtémoc", "Ixhuatlán del Café", "Ixhuatlancillo", "Ixtaczoquitlán", "La Perla", "Los Reyes", "Magdalena", "Maltrata", "Mariano Escobedo", "Mixtla de Altamirano", "Naranjal", "Nogales", "Omealca", "Orizaba", "Paso del Macho", "Rafael Delgado", "Río Blanco", "San Andrés Tenejapan", "Sochiapa", "Soledad Atzompa", "Tehuipango", "Tenampa", "Tepatlaxco", "Tequila", "Texhuacán", "Tezonapa", "Tlacotepec de Mejía", "Tlaltetela", "Tlaquilpa", "Tlilapan", "Tomatlán", "Totutla", "Xoxocotla", "Yanga", "Zentla", "Zongolica", "Boca del Río", "Cotaxtla", "Jamapa", "La Antigua", "Manlio Fabio Altamirano", "Medellín", "Paso de Ovejas", "Puente Nacional", "Soledad de Doblado", "Tlalixcoyan", "Úrsulo Galván", "Veracruz"],
-	6: ["Boca del Río", "Cotaxtla", "Jamapa", "La Antigua", "Manlio Fabio Altamirano", "Medellín", "Paso de Ovejas", "Puente Nacional", "Soledad de Doblado", "Tlalixcoyan", "Úrsulo Galván", "Veracruz"],
-	7: ["Acula", "Alvarado", "Amatitlán", "Ángel R. Cabada", "Carlos A. Carrillo", "Chacaltianguis", "Cosamaloapan de Carpio", "Ignacio de la Llave", "Isla", "Ixmatlahuacan", "José Azueta", "Juan Rodríguez Clara", "Lerdo de Tejada", "Otatitlán", "Playa Vicente", "Saltabarranca", "Santiago Sochiapan", "Tierra Blanca", "Tlacojalpan", "Tlacotalpan", "Tres Valles", "Tuxtilla"],
-	8: ["Catemaco", "Hueyapan de Ocampo", "San Andrés Tuxtla", "Santiago Tuxtla"],
-	9: ["Acayucan", "Agua Dulce", "Chinameca", "Coatzacoalcos", "Cosoleacaque", "Hidalgotitlán", "Ixhuatlán del Sureste", "Jáltipan", "Jesús Carranza", "Las Choapas", "Mecayapan", "Minatitlán", "Moloacán", "Nanchital de Lázaro Cárdenas del Río", "Oluta", "Oteapan", "Pajapan", "San Juan Evangelista", "Sayula de Alemán", "Soconusco", "Soteapan", "Tatahuicapan de Juárez", "Texistepec", "Uxpanapa", "Zaragoza"]
+var municipios = [
+	"Chamal", "Chiconamel", "Chinampa de Gorostiza", "El Higo", "Naranjos Amatlán", "Ozuluama de Mascareñas", "Pánuco", "Platón Sánchez",
+	"Pueblo Viejo", "Tamalín", "Tamiahua", "Tampico Alto", "Tantima", "Tantoyuca", "Tempoal", "Álamo Temapache", "Benito Juárez **",
+	"Castillo de Teayo", "Cerro Azul", "Chicontepec", "Chontla", "Citlaltépetl", "Huayacocotla", "Ilamatlán", "Ixcatepec",
+	"Ixhuatlán de Madero", "Tancoco", "Tepetzintla", "Texcatepec", "Tlachichilco", "Tuxpan", "Zacualpan", "Zontecomatlán de López y Fuentes ",
+	"Cazones de Herrera", "Chumatlán", "Coahuitlán", "Coatzintla", "Coxquihui", "Coyutla", "Espinal", "Filomeno Mata", "Gutiérrez Zamora",
+	"Mecatlán", "Papantla", "Poza Rica de Hidalgo", "Tecolutla", "Tihuatlán", "Zozocolco de Hidalgo", "Atzalan", "Colipa",
+	"Juchique de Ferrer", "Martínez de la Torre", "Misantla", "Nautla", "San Rafael", "Tenochtitlán", "Tlapacoyan", "Vega de Alatorre",
+	"Yecuatla", "Acajete", "Acatlán", "Actopan", "Alto Lucero de Gutiérrez Barrios", "Altotonga", "Apazapan", "Ayahualulco",
+	"Banderilla", "Chiconquiaco", "Coacoatzintla", "Coatepec", "Cosautlán de Carvajal", "Emiliano Zapata", "Ixhuacán de los Reyes",
+	"Jalacingo", "Jalcomulco", "Jilotepec", "Landero y Coss", "Las Minas", "Las Vigas de Ramírez", "Miahuatlán", "Naolinco", "Perote",
+	"Rafael Lucio", "Xalapa", "Xico", "Acultzingo", "Alpatláhuac", "Amatlán de los Reyes", "Aquila", "Astacinga", "Atlahuilco",
+	"Atoyac", "Atzacan", "Calcahualco", "Camarón de Tejeda", "Camerino Z. Mendoza", "Córdoba", "Coscomatepec", "Los Reyes", "Magdalena",
+	"Maltrata", "Omealca", "Orizaba", "Paso del Macho", "Rafael Delgado", "Río Blanco", "San Andrés Tenejapan", "Tequila",
+	"Boca del Río", "Veracruz", "Tatatila", "Teocelo", "Tepetlán", "Tlacolulan", "Tlalnelhuayocan", "Tonayán", "Villa Aldama",
+	"Carrillo Puerto", "Chocamán", "Coetzala", "Comapa", "Cuichapa", "Cuitláhuac", "Fortín", "Huatusco", "Huiloapan de Cuauhtémoc",
+	"Ixhuatlán del Café", "Ixhuatlancillo", "Ixtaczoquitlán", "La Perla", "Mariano Escobedo", "Mixtla de Altamirano", "Naranjal",
+	"Nogales", "Sochiapa", "Soledad Atzompa", "Tehuipango", "Tenampa", "Tepatlaxco", "Texhuacán", "Tezonapa", "Tlacotepec de Mejía",
+	"Tlaltetela", "Tlaquilpa", "Tlilapan", "Tomatlán", "Totutla", "Xoxocotla", "Yanga", "Zentla", "Zongolica", "Cotaxtla", "Jamapa",
+	"La Antigua", "Manlio Fabio Altamirano", "Medellín", "Paso de Ovejas", "Puente Nacional", "Soledad de Doblado", "Tlalixcoyan",
+	"Úrsulo Galván", "Acula", "Alvarado", "Amatitlán", "Ángel R. Cabada", "Carlos A. Carrillo", "Chacaltianguis", "Cosamaloapan de Carpio",
+	"Ignacio de la Llave", "Isla", "Ixmatlahuacan", "José Azueta", "Juan Rodríguez Clara", "Lerdo de Tejada", "Otatitlán", "Playa Vicente",
+	"Saltabarranca", "Santiago Sochiapan", "Tierra Blanca", "Tlacojalpan", "Tlacotalpan", "Tres Valles", "Tuxtilla", "Catemaco",
+	"Hueyapan de Ocampo", "San Andrés Tuxtla", "Santiago Tuxtla", "Acayucan", "Agua Dulce", "Chinameca", "Coatzacoalcos", "Cosoleacaque",
+	"Hidalgotitlán", "Ixhuatlán del Sureste", "Jáltipan", "Jesús Carranza", "Las Choapas", "Mecayapan", "Minatitlán", "Moloacán",
+	"Nanchital de Lázaro Cárdenas del Río", "Oluta", "Oteapan", "Pajapan", "San Juan Evangelista", "Sayula de Alemán", "Soconusco",
+	"Soteapan", "Tatahuicapan de Juárez", "Texistepec", "Uxpanapa", "Zaragoza"
+]
+
+##Datos que se muestran en el mapa
+var regiones_data = {
+	"1":{"Titulo":"Huasteca Alta", "Descripcion": "Con el fin de preservar el planeta, a través de la siembra sustentable, en esta región se promueve la milpa intercalada en la que se cultivan árboles frutales, maíz, frijol y otras especies", "Imagen":"res://recursos/imagenes/reg1/bkd_Huasteca_Fondo.png", "Color":"6d9644"},
+	"2":{"Titulo":"Capital", "Descripcion": "La caña y el café son característicos de este lugar. Prepárate para entrar en los cafetales y sembrar", "Imagen":"res://recursos/imagenes/reg2/bkd_Capital.png", "Color":"#CA4A49"},
+	"3":{"Titulo":"Sotavento", "Descripcion": "Lugar de una próspera actividad pecuaria junto con una riqueza gastronómica e impresionantes arrecifes. Te espera el fondo del oceáno", "Imagen":"res://recursos/imagenes/reg1/bkd_Huasteca_Fondo.png", "Color":"285FAF"},
+	"4":{"Titulo":"Totonacapan", "Descripcion": "La región de 3 corazones. Aquí aprenderás a dividir y a polinizar la vainilla"}
+}
+
+##Indicaciones forma parte del dialogo del zorro
+var reg_1_indicaciones = {
+	"1":{
+		"Nombre": "Ejercicio 1",
+		"Instruccion": "Ayuda a Don Abundio a clasificar los cultivos sembrados en su parcela. Selecciona y arrastra el cultivo hacia la imagen correspondiente"
+	}, 
+	"1.2":{
+		"Nombre": "Ejercicio 1.2",
+		"Instruccion": "Responde las siguientes preguntas con relación al ejercicio anterior"
+	}, 
+	"2":{
+		"Nombre": "Ejercicio 2",
+		"Instruccion": "Ayuda a Don Abundio a servir la misma cantidad de *Axokotl en los 9 vasos. Reparte el líquido entre los vasos vacíos"
+	},
+	"3":{
+		"Nombre": "Ejercicio 3",
+		"Instruccion": "Apoya a Don Abundio a medir su parcela. Arrastra los mecates y calcula el largo del terreno."
+	},
+	"4":{
+		"Nombre": "Ejercicio 4",
+		"Instruccion": "Los hijos de Don Abundio recogen 'Naranja abortada' para venderlas como jugo. A continuación, se describen cuántas naranjas reunieron:"
+	},
+	"5":{
+		"Nombre": "Ejercicio 5",
+		"Instruccion": "Los peones de Don Abundio no pudieron trabajar la jornada completa y se han establecido los siguientes arreglos de tiempo."
+	},
+	"Practica":{
+		"Nombre": "Practiquemos lo aprendido",
+		"Instruccion": "Para cada situación problemática selecciona el significado que está presente"
 	}
+}
+
 
 func EjercicioRegion3(numero_ejercicio):
 	var dialogo = []
@@ -158,6 +213,7 @@ func EjercicioRegion3(numero_ejercicio):
 
 			
 		16:
+		#	Cargar la escena inicial del juego nuevamente
 			var escena_inicial_path = "res://escenas/regiones/region_3/dragdropReg3/parcela_Test.tscn"
 			get_tree().change_scene(escena_inicial_path) 
 	

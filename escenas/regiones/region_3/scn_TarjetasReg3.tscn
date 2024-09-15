@@ -20,7 +20,7 @@ region_rect = Rect2( 0, 0, 1920, 1080 )
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 3896, 541 )
 
-[sub_resource type="DynamicFontData" id=6]
+[sub_resource type="DynamicFontData" id=11]
 hinting = 1
 font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-ExtraBold.ttf"
 
@@ -28,7 +28,7 @@ font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-ExtraBold.ttf"
 size = 25
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 2
-font_data = SubResource( 6 )
+font_data = SubResource( 11 )
 
 [node name="Control" type="Control"]
 margin_right = 40.0

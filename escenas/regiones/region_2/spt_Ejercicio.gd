@@ -31,7 +31,7 @@ func _ready():
 	$Panel/Cuadro.visible = false
 	$Panel/Cuadro.visible = true
 	tit.text = "Ejercicio"
-	$volver.visible = false
+	#$volver.visible = false
 	cambiarEjercicio(ejercicio)
 	print("ESTAMOS EN ESTE EJERCICIO: ", ejercicio)
 	label_dialogo = current_panel2.get_node("Texto")

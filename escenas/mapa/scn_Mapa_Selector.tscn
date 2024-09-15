@@ -66,7 +66,7 @@ pressed = ExtResource( 6 )
 d = 2
 
 [node name="r3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1371, 805 )
+position = Vector2( 905, 569 )
 scale = Vector2( 0.09, 0.09 )
 normal = ExtResource( 8 )
 d = 3

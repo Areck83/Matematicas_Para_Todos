@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://recursos/botones/spt_BtnCambiarEscena.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagenes/registro/btn_Registro.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagenes/fondos/bkd_Pantalla_Inicio.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagenes/img_Logo.png" type="Texture" id=4]
+[ext_resource path="res://escenas/datos/formulario.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenas/inicio/pantallInicio.gd" type="Script" id=6]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
@@ -14,22 +16,30 @@ margin_left = 4.0
 margin_right = 1917.0
 margin_bottom = 1085.0
 rect_pivot_offset = Vector2( -1199, -136 )
+script = ExtResource( 6 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_right = 1920.0
 margin_bottom = 1086.0
 custom_styles/panel = SubResource( 1 )
 
+[node name="Sprite" type="Sprite" parent="Panel"]
+position = Vector2( 1316, 294 )
+scale = Vector2( 0.307989, 0.23584 )
+texture = ExtResource( 4 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Panel"]
+position = Vector2( 1091, 516 )
+scale = Vector2( 0.609302, 0.523139 )
+normal = ExtResource( 2 )
+
 [node name="btnCambiarEscena" type="TouchScreenButton" parent="Panel"]
+visible = false
 position = Vector2( 1091, 516 )
 scale = Vector2( 0.443721, 0.422535 )
 normal = ExtResource( 2 )
 script = ExtResource( 1 )
-escena_ruta = "res://escenas/datos/formulario.tscn"
+escena_destino = ExtResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="Panel/btnCambiarEscena"]
-position = Vector2( 507.075, -525.4 )
-scale = Vector2( 0.694106, 0.558155 )
-texture = ExtResource( 4 )
-
+[connection signal="pressed" from="Panel/TouchScreenButton" to="." method="escena"]
 [connection signal="pressed" from="Panel/btnCambiarEscena" to="Panel/btnCambiarEscena" method="_BtnCambiarEscena_presionado"]

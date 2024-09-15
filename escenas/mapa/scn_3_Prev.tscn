@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://escenas/mapa/spt_3_Prev.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagenes/icon_Salir.png" type="Texture" id=2]
@@ -6,16 +6,10 @@
 [ext_resource path="res://escenas/mapa/img_Mapa_Niveles.png" type="Texture" id=4]
 [ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagenes/reg3/bkd_Sostavento.png" type="Texture" id=6]
+[ext_resource path="res://escenas/mapa/mapaFont.tres" type="Theme" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0705882, 0.305882, 0.545098, 1 )
-
-[sub_resource type="DynamicFontData" id=2]
-font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Regular.ttf"
-
-[sub_resource type="DynamicFont" id=3]
-size = 28
-font_data = SubResource( 2 )
 
 [sub_resource type="DynamicFontData" id=4]
 font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-Bold.ttf"
@@ -70,7 +64,7 @@ margin_left = 1059.0
 margin_top = 655.0
 margin_right = 1643.0
 margin_bottom = 845.0
-custom_fonts/normal_font = SubResource( 3 )
+theme = ExtResource( 7 )
 text = "Preparate para meterte al agua y salvar especies endémicas"
 
 [node name="aaaaaaaaa" type="RichTextLabel" parent="."]

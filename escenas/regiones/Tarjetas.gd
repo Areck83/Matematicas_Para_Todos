@@ -97,6 +97,7 @@ func mostrar_respuesta_incorrecta():
 	get_tree().change_scene("res://escenas/regiones/scn_retroAlimentación.tscn")
 
 func volver():
+	Inicio.play()
 	Song3.stop()
 	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 

@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
+[ext_resource path="res://escenas/regiones/region_2/volverReg2.gd" type="Script" id=1]
 [ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=2]
 [ext_resource path="res://recursos/imagenes/indicadores/icon_Correcto.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagenes/reg3/tarjetas/1A1.png" type="Texture" id=5]
@@ -101,9 +102,10 @@ texture = ExtResource( 5 )
 position = Vector2( 37, 23 )
 scale = Vector2( 0.0856481, 0.0921296 )
 normal = ExtResource( 11 )
+script = ExtResource( 1 )
 
 [connection signal="pressed" from="Panel/Cuadro/tsb_Continuar" to="." method="_on_tsb_Continuar_pressed"]
 [connection signal="pressed" from="Panel/Falso" to="." method="_on_Falso_pressed"]
 [connection signal="pressed" from="Panel/Verdadero" to="." method="_on_Verdadero_pressed"]
 [connection signal="pressed" from="Panel/Verdadero" to="." method="_button"]
-[connection signal="pressed" from="volver" to="." method="volver"]
+[connection signal="pressed" from="volver" to="volver" method="volver"]

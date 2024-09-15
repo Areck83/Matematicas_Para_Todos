@@ -8,5 +8,7 @@ func _c():
 	pass
 
 func _cc():
-	get_tree().change_scene("res://escenas/regiones/region_1/init.tscn")
+	Inicio.stop()
+	Song1.play()
+	get_tree().change_scene("res://escenas/regiones/region_1/Parcerla/scn_Reg_1.tscn")
 	pass # Replace with function body.

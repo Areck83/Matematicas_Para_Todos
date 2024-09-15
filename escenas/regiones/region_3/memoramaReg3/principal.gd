@@ -17,8 +17,7 @@ var cantidad_actual = GlobalVar.cantidad_actualCartas
 
 
 
-func _ready():
-	
+func _ready():		
 	randomize()
 	tiempo.connect("timeout", self, "tiempo_finalizado")
 	$Label.text = str(cantidad_cartas)
@@ -31,8 +30,14 @@ func _ready():
 		# Solo inicializa el juego si hay cartas descubiertas
 		init_game()
 		# Verificar aquí si todas las cartas están emparejadas correctamente
+		if GlobalVar.finalMemo == true:
+			clear_game()
+			$cantidad.visible = false
+			$Label.visible = false
 		if _all_card_flipped():
-			yield(get_tree().create_timer(0.5), "timeout")  # Añadir un pequeño retraso
+			if GlobalVar.ejercicioTarjetas >=16:
+				$Cargando.visible = true
+				yield(get_tree().create_timer(0.5), "timeout")  # Añadir un pequeño retraso
 			get_tree().change_scene("res://escenas/regiones/region_3/scn_TarjetasReg3.tscn")
 			return
 	else:
@@ -143,13 +148,19 @@ func tiempo_finalizado():
 
 
 func clear_game():
+	GlobalVar.finalMemo = false
+	# Limpiar todas las cartas de la escena
 	var cartass = _find_all_cards()
-	while cartas.size() > 0:
-		cartas[0].queue_free()
-		cartas.remove(0)
+	for carta in cartass:
+		carta.queue_free()  # Asegúrate de que 'carta' sea un nodo que puede ser libre de memoria
+
+	# Reiniciar el estado del juego
+	GlobalVar.cartas.clear()  # Limpiar el registro de cartas descubiertas
+	GlobalVar.carta_al_descubierto = null
 	$btn_jugar.visible = true
-	$Label.visible = true
-	$cantidad.visible = true
+	$Label.visible = false
+	$cantidad.visible = false
+
 	
 
 func _all_card_flipped() -> bool:
@@ -168,7 +179,6 @@ func _find_all_cards() -> Array:
 	return res
 
 func _on_btn_jugar_pressed():
-	
 	cantidad_actual = $cantidad.value
 	$btn_jugar.visible = false
 	$cantidad.visible = false

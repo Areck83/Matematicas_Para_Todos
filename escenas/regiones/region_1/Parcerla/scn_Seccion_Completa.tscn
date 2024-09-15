@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://recursos/imagenes/zorro/img_Zorro_Alegre.png" type="Texture" id=6]
+[ext_resource path="res://escenas/regiones/region_1/scn_Seccion_Completa.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Black.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 38
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 38
+font_data = SubResource( 5 )
+
+[node name="Seccion_Completada" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="img_Zorro" type="TextureRect" parent="."]
+margin_left = 641.0
+margin_top = 22.0
+margin_right = 1303.0
+margin_bottom = 684.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="txt_Felicitacion" type="RichTextLabel" parent="."]
+margin_left = 764.0
+margin_top = 571.0
+margin_right = 1182.0
+margin_bottom = 667.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+fit_content_height = true
+
+[node name="txt_Mensaje" type="RichTextLabel" parent="."]
+margin_left = 479.0
+margin_top = 672.0
+margin_right = 1495.0
+margin_bottom = 996.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true

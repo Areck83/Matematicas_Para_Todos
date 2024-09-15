@@ -5,6 +5,7 @@ func _ready():
 
 func _ttt():
 	get_tree().change_scene("res://escenas/regiones/region_3/memoramaReg3/principal.tscn")
+	Inicio.stop()
 	Song3.play()
 	pass
 

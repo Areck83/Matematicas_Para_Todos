@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://escenas/regiones/region_3/memoramaReg3/principal.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagenes/reg3/bkd_Sostavento_Dim.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagenes/botones/btn_Ancho.png" type="Texture" id=3]
+[ext_resource path="res://escenas/datos/themes/formularioTheme.tres" type="Theme" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-SemiBold.ttf"
@@ -89,5 +90,13 @@ text = "10"
 [node name="tiempo" type="Timer" parent="."]
 one_shot = true
 
+[node name="Cargando" type="Label" parent="."]
+visible = false
+margin_left = 1154.0
+margin_top = -4.0
+margin_right = 1895.0
+margin_bottom = 100.0
+theme = ExtResource( 4 )
+text = "Juego completado! Cargando..."
+
 [connection signal="pressed" from="btn_jugar" to="." method="_on_btn_jugar_pressed"]
-[connection signal="value_changed" from="cantidad" to="." method="_on_cantidad_value_changed"]

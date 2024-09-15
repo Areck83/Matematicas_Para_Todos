@@ -32,7 +32,7 @@ func _on_button_pressed():
 	#	$Cargando.visible = true
 	#	yield(get_tree().create_timer(0.5), "timeout")
 	#if GlobalVar.ejercicioTarjetas >= 7:
-	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
+	get_tree().change_scene("res://escenas/regiones/region_1/eje_3.tscn")
 	#else:
 	#	get_tree().change_scene("res://escenas/regiones/region_3/memoramaReg3/principal.tscn")
 

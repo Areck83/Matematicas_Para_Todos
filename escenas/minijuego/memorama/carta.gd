@@ -3,7 +3,7 @@ extends Node2D
 signal volteada(carta)
 signal clicked(carta)
 
-var esta_volteada : bool #Esto se supone es falso por default
+var esta_volteada : bool = false # Asegúrate de que esto sea falso por defecto
 var cara : String 
 
 onready var frontal = $frontal
@@ -16,8 +16,6 @@ func _ready():
 
 func poner_cara(f: String):
 	cara = f
-	
-	#La textura debe de tomarse segun el nombre de la carta
 	frontal.texture = load("res://recursos/imagenes/reg1/tarjetas/"+ cara + ".png")
 
 func flip():
@@ -25,14 +23,18 @@ func flip():
 	
 	$anim.play("descubrir")
 	esta_volteada = true
-	emit_signal("volteada", self) #Con self se indica la carta que se volteó
+	emit_signal("volteada", self)
 
-func reset(): #Regresar todo a la normalidad
+func reset(): # Regresar todo a la normalidad
 	if !esta_volteada: return
-	
+	yield(get_tree().create_timer(0.5), "timeout")
 	$anim.play("cubrir")
 	esta_volteada = false
 	emit_signal("volteada", self)
+
+func mostrar(): # Nueva función para mostrar la carta
+	if !esta_volteada:
+		flip() # Llama a flip para mostrar la carta
 
 func _on_clicked():
 	emit_signal("clicked", self)

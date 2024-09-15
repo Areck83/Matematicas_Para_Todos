@@ -28,11 +28,16 @@ func contarDrags():
 		print("queda 1")
 	if contDrag == 0:
 		GlobalVar.contDrag = 0
-		print("contDrag actual:", contDrag) 
+		print("contDrag actual GLOBAL:", GlobalVar.contDrag) 
 		print("Se acabaron las escenas")
-		get_tree().change_scene("res://escenas/regiones/region_3/escenaFinalReg3.tscn")
+		GlobalVar.ejercicioTarjetas = 1
+		GlobalVar.finalMemo = true
+		print ("Este es el valor de ejercicio TARJETTAS: ", GlobalVar.ejercicioTarjetas)
+		Song3.stop()
+		get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 func volver():
+	Inicio.play()
 	Song3.stop()
 	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 

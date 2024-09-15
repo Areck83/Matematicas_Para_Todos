@@ -1,9 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://recursos/imagenes/reg1/recuadros/rec_Ejercicio_1.png" type="Texture" id=1]
 [ext_resource path="res://recursos/iconos/icon_TrueFalse.tscn" type="PackedScene" id=2]
-[ext_resource path="res://recursos/imagenes/indicadores/icon_Correcto.png" type="Texture" id=3]
-[ext_resource path="res://recursos/imagenes/indicadores/icon_Incorrecto.png" type="Texture" id=4]
 [ext_resource path="res://recursos/imagenes/reg1/bkd_Huasteca_Fondo_Dim.png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagenes/reg1/dialogo/dialog_E_1_2.png" type="Texture" id=6]
 [ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=7]
@@ -101,23 +99,15 @@ align = 1
 
 [node name="c1" parent="rec" instance=ExtResource( 2 )]
 position = Vector2( 819, 215 )
-s = ExtResource( 3 )
-n = ExtResource( 4 )
 
 [node name="c2" parent="rec" instance=ExtResource( 2 )]
 position = Vector2( 815, 470 )
-s = ExtResource( 3 )
-n = ExtResource( 4 )
 
 [node name="c3" parent="rec" instance=ExtResource( 2 )]
 position = Vector2( 815, 673 )
-s = ExtResource( 3 )
-n = ExtResource( 4 )
 
 [node name="c4" parent="rec" instance=ExtResource( 2 )]
 position = Vector2( 1097, 569 )
-s = ExtResource( 3 )
-n = ExtResource( 4 )
 
 [node name="diag" type="TextureRect" parent="."]
 margin_left = 214.0

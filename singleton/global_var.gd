@@ -17,6 +17,7 @@ var cantidad_actualCartas = 0
 var carta_al_descubierto 
 var drag_activo = false
 var contDrag 
+var finalMemo = false
 
 #jarra
 var tap = null

@@ -1,22 +1,22 @@
 extends Node2D
-export (Texture) var s: Texture
-export (Texture) var n: Texture
+export (Texture) var imgCorrecto: Texture
+export (Texture) var imgError: Texture
 
 func _ready():
-	popipo()
+	revisarAsignaciones()
 	pass
 
-func popipo():
-	if !s:
-		print("Checa tu rec")
-	if !n:
-		print("Checa tu rec!")
+func revisarAsignaciones():
+	if !imgCorrecto:
+		print("No se ha seleccionado imagen para caso de uso correcto")
+	if !imgError:
+		print("No se ha seleccionado imagen para caso de uso erroneo")
 	pass
 
-func af():
-	$i.texture = s
+func setImgTrue():
+	$imagen.texture = imgCorrecto
 	pass
 
-func den():
-	$i.texture = n
+func setImgFalse():
+	$imagen.texture = imgError
 	pass

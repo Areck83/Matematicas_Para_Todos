@@ -17,7 +17,7 @@ func _ready():
 
 func poner_cara(f: String):
 	cara = f
-	frontal.texture = load("res://recursos/imagenes/reg3/TarjetasPeces/" + cara + ".png")
+	frontal.texture = load("res://recursos/imagenes/reg3/TarjetasPeces/"+ cara + ".png")
 
 func flip():
 	if esta_volteada: return

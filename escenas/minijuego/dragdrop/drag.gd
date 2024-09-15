@@ -3,14 +3,14 @@ extends Node2D
 export (String) var contenedorDestino: String
 export (String) var tipo: String
 export (Texture) var imagen: Texture
-onready var click = $icono/Area2D/
+
 var seleccionado = false
 var punto_fijo : Vector2
 
 func _ready():
-	click.connect("clicked", self, "_on_clicked")
 	set_process(true)
 	set_physics_process(true)
+	
 	#Borrar los else cuando se hayan hecho las pruebas y ya estén en producción
 	if imagen:
 		$icono.texture = imagen
@@ -41,23 +41,13 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 	if event is InputEventScreenTouch:
 		var touch = event as InputEventScreenTouch
 		if touch.pressed:
-			if not $descubrir.visible:  # Solo permitir selección si no está visible
-				$descubrir.visible = true
-				$descubrir.z_index = 100 
-				seleccionado = true
-		elif not touch.is_pressed() and seleccionado:
-			# Evitar soltar mientras 'descubrir' es visible
-			return
-	pass
-
+			seleccionado = true
+		elif not touch.is_pressed():
+			seleccionado = false
+pass
 
 func _on_Area2D_area_entered(area):
 	if area.name==contenedorDestino:
 		self.queue_free()
 		SignalManager.emit_signal("dragEliminado")
-		seleccionado = false  # Reiniciar el estado
 pass
-
-func _on_clicked():
-	emit_signal("clicked", self)
-	

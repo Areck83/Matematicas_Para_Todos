@@ -1,64 +1,26 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://recursos/imagenes/registro/btn_Municipio.png" type="Texture" id=1]
-[ext_resource path="res://recursos/botones/spt_BtnCambiarEscena.gd" type="Script" id=2]
 [ext_resource path="res://recursos/imagenes/registro/btn_Sexo.png" type="Texture" id=3]
 [ext_resource path="res://escenas/datos/datos.gd" type="Script" id=4]
 [ext_resource path="res://recursos/imagenes/registro/btn_NivelEducativo.png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagenes/registro/img_TituloRegistro.png" type="Texture" id=6]
-[ext_resource path="res://recursos/imagenes/registro/btn_Region.png" type="Texture" id=7]
-[ext_resource path="res://recursos/imagenes/registro/bkd_Pizarra.png" type="Texture" id=8]
-[ext_resource path="res://escenas/mapa/scn_Mapa_Selector.tscn" type="PackedScene" id=9]
+[ext_resource path="res://recursos/imagenes/fondos/bkd_Registro.png" type="Texture" id=7]
+[ext_resource path="res://recursos/imagenes/registro/bkd_pizarron.png" type="Texture" id=8]
 [ext_resource path="res://recursos/imagenes/reg1/btn_bkd_respuestas2.png" type="Texture" id=10]
 [ext_resource path="res://recursos/iconos/usuario-femenino.png" type="Texture" id=11]
 [ext_resource path="res://recursos/iconos/usuario-masculino.png" type="Texture" id=12]
 [ext_resource path="res://escenas/datos/themes/formularioTheme.tres" type="Theme" id=13]
 [ext_resource path="res://recursos/imagenes/botones/btn_Siguiente_Texto.png" type="Texture" id=14]
+[ext_resource path="res://recursos/imagenes/registro/zorrito.png" type="Texture" id=15]
+[ext_resource path="res://recursos/iconos/zorro niña_soriendo.png" type="Texture" id=16]
+[ext_resource path="res://recursos/imagenes/zorro/img_Zorro_Alegre.png" type="Texture" id=17]
 
-[sub_resource type="StyleBoxTexture" id=8]
-texture = ExtResource( 8 )
+[sub_resource type="StyleBoxTexture" id=24]
+texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="DynamicFontData" id=9]
-font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Bold.ttf"
-
-[sub_resource type="DynamicFont" id=10]
-size = 22
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 9 )
-
-[sub_resource type="StyleBoxTexture" id=18]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 711, 242 )
-
-[sub_resource type="StyleBoxTexture" id=21]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 711, 242 )
-
-[sub_resource type="StyleBoxTexture" id=11]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 711, 242 )
-
-[sub_resource type="DynamicFontData" id=12]
-font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Bold.ttf"
-
-[sub_resource type="DynamicFont" id=13]
-size = 22
-outline_size = 2
-outline_color = Color( 0.0196078, 0, 0, 1 )
-use_mipmaps = true
-font_data = SubResource( 12 )
-
-[sub_resource type="StyleBoxTexture" id=19]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 711, 242 )
-
-[sub_resource type="StyleBoxTexture" id=22]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 711, 242 )
-
-[sub_resource type="StyleBoxTexture" id=14]
+[sub_resource type="StyleBoxTexture" id=25]
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 711, 242 )
 
@@ -66,11 +28,9 @@ region_rect = Rect2( 0, 0, 711, 242 )
 font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-Bold.ttf"
 
 [sub_resource type="DynamicFont" id=16]
-size = 22
-outline_size = 2
+size = 40
+outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
-extra_spacing_char = -1
-extra_spacing_space = -1
 font_data = SubResource( 15 )
 
 [sub_resource type="StyleBoxTexture" id=20]
@@ -81,125 +41,247 @@ region_rect = Rect2( 0, 0, 711, 242 )
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 711, 242 )
 
+[sub_resource type="StyleBoxTexture" id=26]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 711, 242 )
+
 [sub_resource type="StyleBoxTexture" id=17]
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 711, 242 )
 
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.8, 0.470588, 0.0352941, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.8, 0.470588, 0.0352941, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.8, 0.470588, 0.0352941, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+
 [node name="Panel" type="Panel"]
+anchor_left = -0.039
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1.0
+margin_left = 73.88
 margin_top = 5.0
-margin_right = -1.0
-margin_bottom = 5.0
-custom_styles/panel = SubResource( 8 )
+margin_right = -13.0
+margin_bottom = -4.0
+custom_styles/panel = SubResource( 24 )
 script = ExtResource( 4 )
 
-[node name="Regiones" type="OptionButton" parent="."]
-margin_left = 1173.0
-margin_top = 230.0
-margin_right = 1619.0
-margin_bottom = 317.0
-rect_pivot_offset = Vector2( 121, 27 )
-theme = ExtResource( 13 )
-custom_fonts/font = SubResource( 10 )
-custom_styles/hover = SubResource( 18 )
-custom_styles/pressed = SubResource( 21 )
-custom_styles/normal = SubResource( 11 )
-text = "Selecciona tu Región"
-align = 2
-icon_align = 2
-items = [ "Selecciona tu Región", null, false, 0, null ]
-selected = 0
+[node name="Pizzaron" type="Sprite" parent="."]
+position = Vector2( 892, 492 )
+scale = Vector2( 1.14948, 1.08241 )
+texture = ExtResource( 8 )
 
-[node name="Municipio" type="OptionButton" parent="."]
-margin_left = 1175.0
-margin_top = 355.0
-margin_right = 1619.0
-margin_bottom = 445.0
-rect_pivot_offset = Vector2( 121, 27 )
+[node name="MunicipioInput" type="TextEdit" parent="."]
+anchor_right = 0.206
+anchor_bottom = 0.125
+margin_left = 516.0
+margin_top = 348.0
+margin_right = 711.48
+margin_bottom = 373.625
 theme = ExtResource( 13 )
-custom_fonts/font = SubResource( 13 )
-custom_styles/hover = SubResource( 19 )
-custom_styles/pressed = SubResource( 22 )
-custom_styles/normal = SubResource( 14 )
-text = "Selecciona un Municipio"
-align = 2
-icon_align = 2
-items = [ "Selecciona un Municipio", null, true, 0, null, "(Es necesario seleccionar una región primero)", null, true, 1, null ]
-selected = 0
+custom_constants/line_spacing = 0
+custom_constants/completion_lines = 0
+custom_constants/completion_max_width = 0
+custom_constants/completion_scroll_width = 0
+custom_styles/normal = SubResource( 25 )
+breakpoint_gutter = true
 
 [node name="NivelEducativo" type="OptionButton" parent="."]
-margin_left = 1186.75
-margin_top = 594.5
-margin_right = 1623.75
-margin_bottom = 683.5
+margin_left = 1265.0
+margin_top = 191.0
+margin_right = 1774.0
+margin_bottom = 340.0
 rect_scale = Vector2( 1.00956, 1 )
 rect_pivot_offset = Vector2( 121, 27 )
 theme = ExtResource( 13 )
 custom_fonts/font = SubResource( 16 )
 custom_styles/hover = SubResource( 20 )
 custom_styles/pressed = SubResource( 23 )
+custom_styles/focus = SubResource( 26 )
 custom_styles/normal = SubResource( 17 )
 text = "Primaria"
-align = 2
-icon_align = 2
+align = 1
 items = [ "Primaria", null, false, 1, null, "Secundaría", null, false, 2, null ]
 selected = 0
 
 [node name="Registro" type="Sprite" parent="."]
-position = Vector2( 828, 253 )
-scale = Vector2( 0.386834, 0.527682 )
+position = Vector2( 772, 165 )
+scale = Vector2( 0.447855, 0.57526 )
 texture = ExtResource( 6 )
 
-[node name="Regiones2" type="Sprite" parent="."]
-position = Vector2( 1205.75, 247.5 )
-scale = Vector2( 0.317639, 0.289398 )
-texture = ExtResource( 7 )
-
 [node name="Municipio2" type="Sprite" parent="."]
-position = Vector2( 1213.75, 368.5 )
-scale = Vector2( 0.287218, 0.284213 )
+position = Vector2( 793, 310 )
+scale = Vector2( 0.419, 0.444 )
 texture = ExtResource( 1 )
 
 [node name="Sexo2" type="Sprite" parent="."]
-position = Vector2( 1221.75, 496.5 )
-scale = Vector2( 0.269479, 0.282504 )
+position = Vector2( 1502, 418.63 )
+scale = Vector2( 0.419, 0.397533 )
 texture = ExtResource( 3 )
 
 [node name="NivelEducativo2" type="Sprite" parent="."]
-position = Vector2( 1224.75, 609.906 )
-scale = Vector2( 0.2626, 0.260208 )
+position = Vector2( 1507, 155 )
+scale = Vector2( 0.41896, 0.443708 )
 texture = ExtResource( 5 )
 
 [node name="Masculino" type="CheckBox" parent="."]
-margin_left = 1460.0
-margin_top = 446.0
-margin_right = 1687.0
-margin_bottom = 676.0
+visible = false
+margin_left = 1557.0
+margin_top = 323.0
+margin_right = 1784.0
+margin_bottom = 553.0
 rect_scale = Vector2( 0.6, 0.6 )
 icon = ExtResource( 12 )
 
 [node name="Femenino" type="CheckBox" parent="."]
+visible = false
 anchor_right = 0.096
-margin_left = 1327.0
-margin_top = 448.0
-margin_right = 1369.68
-margin_bottom = 671.0
+margin_left = 1400.0
+margin_top = 331.0
+margin_right = 1442.68
+margin_bottom = 554.0
 rect_scale = Vector2( 0.6, 0.6 )
 icon = ExtResource( 11 )
 
-[node name="btnCambiarEscena" type="TouchScreenButton" parent="."]
-position = Vector2( 1578, 980 )
-scale = Vector2( 0.245582, 0.269618 )
-script = ExtResource( 2 )
-escena_destino = ExtResource( 9 )
-imagen = ExtResource( 14 )
+[node name="Zorrito" type="Sprite" parent="."]
+position = Vector2( 882.5, 631 )
+scale = Vector2( 0.958854, 0.866667 )
+texture = ExtResource( 15 )
+
+[node name="TMasculinoPressed" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 1451, 430 )
+scale = Vector2( 0.1625, 0.14537 )
+normal = ExtResource( 17 )
+
+[node name="TMasculino" type="TouchScreenButton" parent="."]
+position = Vector2( 1469, 426 )
+scale = Vector2( 0.156, 0.143 )
+normal = ExtResource( 12 )
+pressed = ExtResource( 17 )
+
+[node name="TFemeninoPressed" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 1170, 415 )
+scale = Vector2( 0.162019, 0.153704 )
+normal = ExtResource( 16 )
+
+[node name="TFemenino" type="TouchScreenButton" parent="."]
+position = Vector2( 1188, 428 )
+scale = Vector2( 0.156449, 0.142593 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 16 )
+
+[node name="btnSiguiente" type="TouchScreenButton" parent="."]
+position = Vector2( 1417, 816 )
+scale = Vector2( 1.73016, 1.94017 )
+normal = ExtResource( 14 )
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+margin_left = 561.0
+margin_top = 381.0
+margin_right = 812.0
+margin_bottom = 462.0
+theme = ExtResource( 13 )
+
+[node name="Validacion2" type="Panel" parent="."]
+visible = false
+anchor_right = 0.057
+anchor_bottom = 0.138
+margin_left = 548.0
+margin_top = 207.0
+margin_right = 1332.24
+margin_bottom = 580.202
+custom_styles/panel = SubResource( 27 )
+
+[node name="Label" type="Label" parent="Validacion2"]
+margin_left = 103.0
+margin_top = 141.0
+margin_right = 799.0
+margin_bottom = 352.0
+theme = ExtResource( 13 )
+text = "Elige tu Nivel Educativo antes
+de continuar."
+align = 1
+valign = 1
+
+[node name="Validacion1" type="Panel" parent="."]
+visible = false
+margin_left = 548.0
+margin_top = 207.0
+margin_right = 1450.0
+margin_bottom = 730.0
+custom_styles/panel = SubResource( 28 )
+
+[node name="Label" type="Label" parent="Validacion1"]
+margin_left = 128.0
+margin_top = 139.0
+margin_right = 756.0
+margin_bottom = 350.0
+theme = ExtResource( 13 )
+text = "Escribe tu municipio antes
+de continuar."
+align = 1
+valign = 1
+
+[node name="Validacion3" type="Panel" parent="."]
+visible = false
+margin_left = 546.0
+margin_top = 211.0
+margin_right = 1450.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( -811, 372 )
+custom_styles/panel = SubResource( 29 )
+
+[node name="Label" type="Label" parent="Validacion3"]
+margin_left = 202.0
+margin_top = 134.0
+margin_right = 693.0
+margin_bottom = 345.0
+theme = ExtResource( 13 )
+text = "Escoge el Sexo antes
+de Continuar"
+align = 1
+valign = 1
+
+[node name="MunicipioValicacion" type="Panel" parent="."]
+visible = false
+margin_left = 546.0
+margin_top = 211.0
+margin_right = 1450.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( -811, 372 )
+custom_styles/panel = SubResource( 29 )
+
+[node name="Label" type="Label" parent="MunicipioValicacion"]
+margin_left = 202.0
+margin_top = 134.0
+margin_right = 693.0
+margin_bottom = 345.0
+theme = ExtResource( 13 )
+text = "Escribe el municipio
+Correcto"
+align = 1
+valign = 1
 
 [connection signal="ready" from="." to="." method="_ready"]
 [connection signal="ready" from="." to="." method="_setup_initial_options"]
-[connection signal="item_selected" from="Regiones" to="." method="_on_region_selected"]
 [connection signal="item_selected" from="NivelEducativo" to="." method="_on_nivel_selected"]
 [connection signal="toggled" from="Masculino" to="." method="_on_masculino_toggled"]
 [connection signal="toggled" from="Femenino" to="." method="_on_femenino_toggled"]
-[connection signal="pressed" from="btnCambiarEscena" to="btnCambiarEscena" method="_BtnCambiarEscena_presionado"]
+[connection signal="pressed" from="btnSiguiente" to="." method="btn_siguiente"]

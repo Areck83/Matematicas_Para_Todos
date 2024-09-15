@@ -7,5 +7,5 @@ func _qop():
 	pass
 	
 func _qap():
-	get_tree().change_scene("res://escenas/regiones/region_1/eje_2.tscn")
+	get_tree().change_scene("res://escenas/regiones/region_1/memoramaReg1/Memorama1.tscn")
 	pass
