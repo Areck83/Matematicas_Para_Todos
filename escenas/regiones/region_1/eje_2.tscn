@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://recursos/imagenes/reg1/bkd_Huasteca_Fondo_Dim.png" type="Texture" id=1]
 [ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=2]
@@ -11,13 +11,10 @@
 [ext_resource path="res://recursos/imagenes/reg1/dialogo/dialog_E_2.png" type="Texture" id=9]
 [ext_resource path="res://recursos/imagenes/reg1/btn_inc2_b.png" type="Texture" id=10]
 [ext_resource path="res://recursos/imagenes/reg1/btn_inc_b.png" type="Texture" id=11]
-[ext_resource path="res://recursos/imagenes/reg1/icon_Vaso_2.png" type="Texture" id=12]
-[ext_resource path="res://recursos/imagenes/reg1/icon_Vaso_3.png" type="Texture" id=13]
 [ext_resource path="res://recursos/imagenes/reg1/icon_Vaso_Empty.png" type="Texture" id=14]
-[ext_resource path="res://recursos/imagenes/reg1/icon_Vaso_4.png" type="Texture" id=15]
-[ext_resource path="res://recursos/imagenes/reg1/icon_Vaso_1.png" type="Texture" id=16]
-[ext_resource path="res://escenas/minijuego/dragdrop/drag_Colision.tscn" type="PackedScene" id=17]
 [ext_resource path="res://escenas/regiones/region_1/eje_2.gd" type="Script" id=18]
+[ext_resource path="res://recursos/imagenes/indicadores/icon_Incorrecto.png" type="Texture" id=19]
+[ext_resource path="res://recursos/imagenes/indicadores/icon_Correcto.png" type="Texture" id=20]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 18 )
@@ -87,90 +84,84 @@ position = Vector2( 1419, 643 )
 scale = Vector2( 0.748387, 0.748387 )
 normal = ExtResource( 8 )
 
-[node name="drag_Colision" parent="." instance=ExtResource( 17 )]
-position = Vector2( 210, 350 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
-unidades_Contenido = 4
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1784, 699 )
+texture = ExtResource( 20 )
 
-[node name="drag_Colision2" parent="." instance=ExtResource( 17 )]
-position = Vector2( 402, 351 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
-unidades_Contenido = 4
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1784, 915 )
+texture = ExtResource( 19 )
 
-[node name="drag_Colision3" parent="." instance=ExtResource( 17 )]
-position = Vector2( 589, 349 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
-unidades_Contenido = 4
+[node name="Sprite3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1784, 915 )
+texture = ExtResource( 20 )
 
-[node name="drag_Colision4" parent="." instance=ExtResource( 17 )]
-position = Vector2( 786, 352 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
-unidades_Contenido = 4
+[node name="Sprite4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1784, 699 )
+texture = ExtResource( 19 )
 
-[node name="drag_Colision5" parent="." instance=ExtResource( 17 )]
-position = Vector2( 974, 350 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
-unidades_Contenido = 2
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="."]
+position = Vector2( 100, 282 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
 
-[node name="drag_Colision6" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1159, 352 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="."]
+position = Vector2( 293, 289 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
 
-[node name="drag_Colision7" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1354, 352 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="."]
+position = Vector2( 478, 285 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
 
-[node name="drag_Colision8" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1536, 355 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
+[node name="TouchScreenButton11" type="TouchScreenButton" parent="."]
+position = Vector2( 677, 285 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
 
-[node name="drag_Colision9" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1724, 352 )
-scale = Vector2( 1.2, 1.2 )
-imagen_vacio = ExtResource( 14 )
-imagen_relleno_1 = ExtResource( 16 )
-imagen_relleno_2 = ExtResource( 12 )
-imagen_relleno_3 = ExtResource( 13 )
-imagen_relleno_4 = ExtResource( 15 )
+[node name="TouchScreenButton12" type="TouchScreenButton" parent="."]
+position = Vector2( 866, 282 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
+
+[node name="TouchScreenButton13" type="TouchScreenButton" parent="."]
+position = Vector2( 1051, 289 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
+
+[node name="TouchScreenButton14" type="TouchScreenButton" parent="."]
+position = Vector2( 1244, 285 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
+
+[node name="TouchScreenButton15" type="TouchScreenButton" parent="."]
+position = Vector2( 1425, 292 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
+
+[node name="TouchScreenButton16" type="TouchScreenButton" parent="."]
+position = Vector2( 1614, 289 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 14 )
 
 [connection signal="pressed" from="TouchScreenButton" to="." method="_skbi"]
+[connection signal="pressed" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_pressed"]
+[connection signal="pressed" from="TouchScreenButton5" to="." method="_on_TouchScreenButton5_pressed"]
+[connection signal="pressed" from="TouchScreenButton6" to="." method="_on_TouchScreenButton6_pressed"]
+[connection signal="pressed" from="TouchScreenButton7" to="." method="_on_TouchScreenButton7_pressed"]
+[connection signal="pressed" from="TouchScreenButton3" to="." method="_on_TouchScreenButton3_pressed"]
+[connection signal="pressed" from="TouchScreenButton4" to="." method="_on_TouchScreenButton4_pressed"]
+[connection signal="pressed" from="TouchScreenButton8" to="." method="_on_TouchScreenButton8_pressed"]
+[connection signal="pressed" from="TouchScreenButton9" to="." method="_on_TouchScreenButton9_pressed"]
+[connection signal="pressed" from="TouchScreenButton10" to="." method="_on_TouchScreenButton10_pressed"]
+[connection signal="pressed" from="TouchScreenButton11" to="." method="_on_TouchScreenButton11_pressed"]
+[connection signal="pressed" from="TouchScreenButton12" to="." method="_on_TouchScreenButton12_pressed"]
+[connection signal="pressed" from="TouchScreenButton13" to="." method="_on_TouchScreenButton13_pressed"]
+[connection signal="pressed" from="TouchScreenButton14" to="." method="_on_TouchScreenButton14_pressed"]
+[connection signal="pressed" from="TouchScreenButton15" to="." method="_on_TouchScreenButton15_pressed"]
+[connection signal="pressed" from="TouchScreenButton16" to="." method="_on_TouchScreenButton16_pressed"]

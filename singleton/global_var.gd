@@ -18,5 +18,8 @@ var carta_al_descubierto
 var drag_activo = false
 var contDrag 
 
+#jarra
+var tap = null
+
 #var tarjeta = 1
 #var num_tarjeta = 1
