@@ -22,5 +22,11 @@ var finalMemo = false
 #jarra
 var tap = null
 
+#region1
+var reg1_escena1 = false
+var reg1_escena2 = false
+var reg1_escena3 = false
+var reg1_escena4 = false
+
 #var tarjeta = 1
 #var num_tarjeta = 1

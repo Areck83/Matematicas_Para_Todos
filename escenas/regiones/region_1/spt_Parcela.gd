@@ -4,6 +4,7 @@ var c = 0
 var tote = 0
 
 func _ready():
+	StatusEscena.reg1Status()
 	ccmaik()
 
 func ccmaik():
@@ -15,6 +16,7 @@ func ccmaik():
 func falpa():
 	tote -= 1
 	if tote == 0:
+		GlobalVar.reg1_escena1 = true
 		get_tree().change_scene("res://escenas/regiones/region_1/eje_2.tscn")
 
 func _shixas():
