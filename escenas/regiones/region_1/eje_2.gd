@@ -8,10 +8,10 @@ onready var d = $Sprite4
 var sele1 = false 
 var sele2 = false # Variable para controlar
 var sele3 = false
-var i = 0
-var j = 0
-var k = 0
-var l = 0
+var i = 4
+var j = 4
+var k = 4
+var l = 4
 var m = 2
 var n = 0
 var o = 0
@@ -104,9 +104,9 @@ func _on_TouchScreenButton3_pressed():
 #jarra
 
 func _on_TouchScreenButton8_pressed():
-	i += 1
-	if i >= imgJ.size():  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
-		i = 0
+	i -= 1
+	if i < 0:  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
+		i = imgJ.size() - 1
 	print("1 veces presionado", i)
 	$TouchScreenButton8.normal = load(imgJ[i])
 	ver()
@@ -114,9 +114,9 @@ func _on_TouchScreenButton8_pressed():
 
 
 func _on_TouchScreenButton9_pressed():
-	j += 1
-	if j >= imgJ.size():  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
-		j = 0
+	j -= 1
+	if j < 0:  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
+		j = imgJ.size() - 1
 	print("2 veces presionado", j)
 	$TouchScreenButton9.normal = load(imgJ[j])
 	ver()
@@ -125,9 +125,9 @@ func _on_TouchScreenButton9_pressed():
 
 func _on_TouchScreenButton10_pressed():
 	
-	k += 1
-	if k >= imgJ.size():  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
-		k = 0
+	k -= 1
+	if k < 0:  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
+		k = imgJ.size() - 1
 	print("3 veces presionado", k)
 	$TouchScreenButton10.normal = load(imgJ[k])
 	ver()
@@ -136,9 +136,9 @@ func _on_TouchScreenButton10_pressed():
 
 func _on_TouchScreenButton11_pressed():
 	
-	l += 1
-	if l >= imgJ.size():  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
-		l = 0
+	l -= 1
+	if l < 0:  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
+		l = imgJ.size() - 1
 	print("4 veces presionado", l)
 	$TouchScreenButton11.normal = load(imgJ[l])
 	ver()
@@ -147,9 +147,9 @@ func _on_TouchScreenButton11_pressed():
 
 func _on_TouchScreenButton12_pressed():
 	
-	m += 1
-	if m >= imgJ.size():  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
-		m = 0
+	m -= 1
+	if m < 0:  # Si el índice sobrepasa el tamaño del diccionario, reinicia a 0
+		m = imgJ.size() - 1
 	print("5 veces presionado", m)
 	$TouchScreenButton12.normal = load(imgJ[m])
 	ver()
