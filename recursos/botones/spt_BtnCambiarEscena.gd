@@ -17,5 +17,6 @@ func _btn_presionado():
 	if not escena_destino:
 		print("No se ha asignado nada como escena de destino!")
 		return
+	GlobalVar.reg1_escena1 = true
 	get_tree().change_scene_to(escena_destino)
 pass
