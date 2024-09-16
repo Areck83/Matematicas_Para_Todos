@@ -12,7 +12,7 @@ onready var fon = $Panel/Cuadro/Fondo
 onready var tit = $Panel/Cuadro/Title
 onready var txt = $Panel/Cuadro/Texto
 
-var indice_dialogo = 0
+var indice_dialogo = 0 
 var label_dialogo
 var respuesta 
 var ejercicio = GlobalVar.ejeTarjeta
@@ -28,6 +28,17 @@ func _on_ejercicio_actualizado(nuevo_ejercicio):
 	print("El ejercicio se ha actualizado a:", nuevo_ejercicio)
 
 func _ready():
+	if GlobalVar.ejeTarCom == true:
+		print("paso a laberinto 1")
+		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab.tscn")
+		pass
+	if GlobalVar.lab1Com == true:
+		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab2.tscn")
+		pass
+	if GlobalVar.lab2Com == true:
+		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab3.tscn")
+		pass
+	
 	$Panel/Cuadro.visible = false
 	$Panel/Cuadro.visible = true
 	tit.text = "Ejercicio"

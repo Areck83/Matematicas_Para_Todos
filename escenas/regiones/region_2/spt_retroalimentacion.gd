@@ -29,8 +29,10 @@ func actualizar_escena():
 
 func _on_button_pressed():
 	if GlobalVar.ejeTarjeta ==7:
-		#$Cargando.visible = true
 		#yield(get_tree().create_timer(0.5), "timeout")
+		GlobalVar.ejeTarCom = true
+		print("se completaron las tarjetas? ",GlobalVar.ejeTarCom)
+		
 		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab.tscn")
 	if GlobalVar.ejeTarjeta < 7:
 		get_tree().change_scene("res://escenas/regiones/region_2/init_2.tscn")
@@ -40,15 +42,28 @@ func _on_button_pressed():
 	print("el ejercicio es: ", GlobalVar.ejercicio)
 	if GlobalVar.ejercicio == 2:
 		#scene_path = "res://escenas/minijuego/laberinto/laberinto2.tscn"
+		
+		GlobalVar.lab1Com = true
 		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab2.tscn")
 	if GlobalVar.ejercicio == 3:
 		#scene_path = "res://escenas/minijuego/laberinto/laberinto3.tscn"
+		GlobalVar.lab2Com = true
 		get_tree().change_scene("res://escenas/regiones/region_2/tran_lab3.tscn")
 	if GlobalVar.ejercicio >= 4:
 		#scene_path = "res://escenas/regiones/region_2/scn_Reg_2.tscn"
 		GlobalVar.ejercicio=1
 		BocinaPrincipal.para()
 		GlobalVar.ejeTarjeta = 1
+		#
+		GlobalVar.puntos = 0
+		GlobalVar.ejercicio = 1
+		GlobalVar.respuesta = 0
+		GlobalVar.ejeTarjeta = 1
+		#
+		GlobalVar.ejeTarCom = false
+		GlobalVar.lab1Com = false
+		GlobalVar.lab2Com = false
+		#
 		get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 

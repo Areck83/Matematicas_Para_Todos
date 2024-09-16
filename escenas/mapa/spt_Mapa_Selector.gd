@@ -2,10 +2,7 @@ extends Node2D
 
 func _ready():
 	SignalManager.connect("ireg", self, "alakazam")
-	GlobalVar.puntos = 0
-	GlobalVar.ejercicio = 1
-	GlobalVar.respuesta = 0
-	GlobalVar.ejeTarjeta = 1
+	
 	pass
 
 func alakazam(w):

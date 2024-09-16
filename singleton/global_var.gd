@@ -7,6 +7,10 @@ var respuesta = 0
 var esnRetro=null
 var msgRetro=""
 var ejeTarjeta = 1
+var ejeTarCom = false
+var lab1Com = false
+var lab2Com = false
+
 
 var ejercicioTarjetas = 1
 var escenaRetroalimentacion = null
