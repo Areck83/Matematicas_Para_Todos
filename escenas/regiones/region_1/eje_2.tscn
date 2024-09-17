@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://recursos/imagenes/reg1/bkd_Huasteca_Fondo_Dim.png" type="Texture" id=1]
 [ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://recursos/imagenes/reg1/dialogo/dialog_E_2.png" type="Texture" id=9]
 [ext_resource path="res://recursos/imagenes/reg1/btn_inc2_b.png" type="Texture" id=10]
 [ext_resource path="res://recursos/imagenes/reg1/btn_inc_b.png" type="Texture" id=11]
+[ext_resource path="res://escenas/regiones/region_2/volverReg2.gd" type="Script" id=12]
 [ext_resource path="res://recursos/imagenes/reg1/icon_Vaso_Empty.png" type="Texture" id=14]
 [ext_resource path="res://escenas/regiones/region_1/eje_2.gd" type="Script" id=18]
 [ext_resource path="res://recursos/imagenes/indicadores/icon_Incorrecto.png" type="Texture" id=19]
@@ -150,6 +151,12 @@ position = Vector2( 1614, 289 )
 scale = Vector2( 0.1, 0.1 )
 normal = ExtResource( 14 )
 
+[node name="volver" type="TouchScreenButton" parent="."]
+position = Vector2( 37, 23 )
+scale = Vector2( 0.0856481, 0.0921296 )
+normal = ExtResource( 2 )
+script = ExtResource( 12 )
+
 [connection signal="pressed" from="TouchScreenButton" to="." method="_skbi"]
 [connection signal="pressed" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_pressed"]
 [connection signal="pressed" from="TouchScreenButton5" to="." method="_on_TouchScreenButton5_pressed"]
@@ -166,3 +173,4 @@ normal = ExtResource( 14 )
 [connection signal="pressed" from="TouchScreenButton14" to="." method="_on_TouchScreenButton14_pressed"]
 [connection signal="pressed" from="TouchScreenButton15" to="." method="_on_TouchScreenButton15_pressed"]
 [connection signal="pressed" from="TouchScreenButton16" to="." method="_on_TouchScreenButton16_pressed"]
+[connection signal="pressed" from="volver" to="volver" method="volver"]

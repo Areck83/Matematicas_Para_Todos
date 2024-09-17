@@ -14,6 +14,7 @@ func _ready():
 func _btn_presionado():
 	Inicio.play()
 	BocinaPrincipal.para()
+	Song1.stop()
 	if not escena_destino:
 		print("No se ha asignado nada como escena de destino!")
 		return

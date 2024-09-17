@@ -1,9 +1,9 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenas/minijuego/laberinto/tip_content.tscn" type="PackedScene" id=2]
 [ext_resource path="res://escenas/minijuego/laberinto/pregunta1.tscn" type="PackedScene" id=3]
-[ext_resource path="res://recursos/botones/scn_BtnCambiarEscena.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/regiones/region_2/volverReg2.gd" type="Script" id=4]
 [ext_resource path="res://recursos/botones/movimientoLaberinto/izquierda_derecha.tscn" type="PackedScene" id=5]
 [ext_resource path="res://escenas/minijuego/laberinto/tip.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entidades/zorroLaberinto/zorroLaberinto.tscn" type="PackedScene" id=7]
@@ -11,7 +11,6 @@
 [ext_resource path="res://recursos/botones/movimientoLaberinto/btn_Arriba_abajo.tscn" type="PackedScene" id=9]
 [ext_resource path="res://escenas/minijuego/laberinto/meta.tscn" type="PackedScene" id=10]
 [ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=11]
-[ext_resource path="res://escenas/mapa/scn_Mapa_Selector.tscn" type="PackedScene" id=12]
 [ext_resource path="res://recursos/tilemaps/cafetal/laberintoTest2.png" type="Texture" id=13]
 [ext_resource path="res://recursos/imagenes/reg2/bkd_Capital_Edit_Dim.png" type="Texture" id=14]
 [ext_resource path="res://escenas/dialogo/dialog_Planteamiento.png" type="Texture" id=15]
@@ -407,12 +406,6 @@ scale = Vector2( 2, 2 )
 position = Vector2( -64, -229 )
 scale = Vector2( 2, 2 )
 
-[node name="volver" parent="CanvasLayer" instance=ExtResource( 4 )]
-position = Vector2( 20, 12 )
-scale = Vector2( 0.1, 0.1 )
-escena_destino = ExtResource( 12 )
-imagen = ExtResource( 11 )
-
 [node name="DialogPlanteamiento" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 948, 120 )
 scale = Vector2( 0.309771, 0.279427 )
@@ -433,6 +426,12 @@ valign = 1
 [node name="caraZorro" parent="CanvasLayer" instance=ExtResource( 1 )]
 position = Vector2( 1644, 131 )
 scale = Vector2( 0.1, 0.1 )
+
+[node name="volver" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 37, 23 )
+scale = Vector2( 0.0856481, 0.0921296 )
+normal = ExtResource( 11 )
+script = ExtResource( 4 )
 
 [node name="estaticos" type="StaticBody2D" parent="."]
 
@@ -618,4 +617,5 @@ scale = Vector2( 2.8, 2.8 )
 position = Vector2( 2992, -123 )
 scale = Vector2( 0.466304, 0.570284 )
 
+[connection signal="pressed" from="CanvasLayer/volver" to="CanvasLayer/volver" method="volver"]
 [connection signal="body_entered" from="meta" to="." method="_on_meta_body_entered"]

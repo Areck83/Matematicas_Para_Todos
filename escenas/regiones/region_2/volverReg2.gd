@@ -13,6 +13,7 @@ func _ready():
 func volver():
 	Inicio.play()
 	BocinaPrincipal.para()
+	Song1.stop()
 	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

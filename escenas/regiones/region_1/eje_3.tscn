@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://recursos/imagenes/reg1/bkd_Huasteca_Fondo_Dim.png" type="Texture" id=1]
 [ext_resource path="res://recursos/imagenes/reg1/img_Parcela_full.png" type="Texture" id=2]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=3]
 [ext_resource path="res://recursos/imagenes/reg1/dialogo/dialog_E_3.png" type="Texture" id=4]
 [ext_resource path="res://recursos/imagenes/reg1/tc_respuestaCuerda3.png" type="Texture" id=5]
 [ext_resource path="res://escenas/minijuego/dragdrop/drag.tscn" type="PackedScene" id=6]
@@ -15,6 +16,7 @@
 [ext_resource path="res://escenas/mapa/mapaFont.tres" type="Theme" id=14]
 [ext_resource path="res://recursos/imagenes/reg1/tc_respuestaCuerda1.png" type="Texture" id=15]
 [ext_resource path="res://recursos/imagenes/reg1/tc_respuestaCuerda2.png" type="Texture" id=16]
+[ext_resource path="res://escenas/regiones/region_2/volverReg2.gd" type="Script" id=17]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 10 )
@@ -158,6 +160,13 @@ normal = ExtResource( 16 )
 position = Vector2( 1722, 695 )
 normal = ExtResource( 5 )
 
+[node name="volver" type="TouchScreenButton" parent="."]
+position = Vector2( 37, 23 )
+scale = Vector2( 0.0856481, 0.0921296 )
+normal = ExtResource( 3 )
+script = ExtResource( 17 )
+
 [connection signal="pressed" from="r1" to="." method="_respuestaIncorrecta"]
 [connection signal="pressed" from="r2" to="." method="_respuestaIncorrecta"]
 [connection signal="pressed" from="r3" to="." method="_respuestaCorrecta"]
+[connection signal="pressed" from="volver" to="volver" method="volver"]
