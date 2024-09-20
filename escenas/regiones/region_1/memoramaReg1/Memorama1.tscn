@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://escenas/regiones/region_1/memoramaReg1/Memorama1.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagenes/reg3/bkd_Sostavento_Dim.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagenes/indicadores/dialog_Planteamiento.png" type="Texture" id=3]
 [ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/regiones/region_2/volverReg2.gd" type="Script" id=5]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=6]
 
 [sub_resource type="Theme" id=1]
 
@@ -79,3 +81,11 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "En esta sección del memorama, empareja la acción con un ejemplo de cómo se realiza una operación con fracciones."
 autowrap = true
+
+[node name="volver" type="TouchScreenButton" parent="."]
+position = Vector2( 37, 23 )
+scale = Vector2( 0.0856481, 0.0921296 )
+normal = ExtResource( 6 )
+script = ExtResource( 5 )
+
+[connection signal="pressed" from="volver" to="volver" method="volver"]

@@ -279,6 +279,26 @@ Correcto"
 align = 1
 valign = 1
 
+[node name="Validacion4" type="Panel" parent="."]
+visible = false
+margin_left = 546.0
+margin_top = 211.0
+margin_right = 1450.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( -811, 372 )
+custom_styles/panel = SubResource( 29 )
+
+[node name="Label" type="Label" parent="Validacion4"]
+margin_left = 202.0
+margin_top = 134.0
+margin_right = 693.0
+margin_bottom = 345.0
+theme = ExtResource( 13 )
+text = "DATOS GUARDADOS
+CORRECTAMENTE..."
+align = 1
+valign = 1
+
 [connection signal="ready" from="." to="." method="_ready"]
 [connection signal="ready" from="." to="." method="_setup_initial_options"]
 [connection signal="item_selected" from="NivelEducativo" to="." method="_on_nivel_selected"]
