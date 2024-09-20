@@ -236,7 +236,7 @@ margin_bottom = -51.6739
 rect_scale = Vector2( 1.38202, 3.08134 )
 custom_fonts/font = SubResource( 6 )
 text = "Ejercicio 1
-Encuentra la salida del laberinto y en el trayecto recolecta los cofes del saber para poder enfrentar la pregunta final"
+Encuentra la salida del laberinto y en el trayecto recolecta los cofres del saber para poder enfrentar la pregunta final"
 valign = 1
 
 [node name="caraZorro" parent="CanvasLayer" instance=ExtResource( 10 )]
