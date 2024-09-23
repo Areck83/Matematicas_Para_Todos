@@ -139,4 +139,8 @@ func reset_board():
 func change_scene():
 	Song1.stop()
 	Inicio.play()
+	GlobalVar.reg1_escena1 = false
+	GlobalVar.reg1_escena2 = false
+	GlobalVar.reg1_escena3 = false
+	GlobalVar.reg1_escena4 = false
 	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")  # Cambia la escena

@@ -53,6 +53,7 @@ func _on_button_pressed():
 		#scene_path = "res://escenas/regiones/region_2/scn_Reg_2.tscn"
 		GlobalVar.ejercicio=1
 		BocinaPrincipal.para()
+		Inicio.play()
 		GlobalVar.ejeTarjeta = 1
 		#
 		GlobalVar.puntos = 0
