@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://recursos/video/creditos.webm" type="VideoStream" id=1]
+[ext_resource path="res://recursos/iconos/usuario-masculino.png" type="Texture" id=2]
+[ext_resource path="res://recursos/video/Video.gd" type="Script" id=3]
+[ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=4]
+
+[node name="VideoPlayer" type="VideoPlayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -598.0 ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+light_mask = 0
+position = Vector2( 977, 558 )
+scale = Vector2( 0.666667, 0.540741 )
+texture = ExtResource( 2 )
+
+[node name="volver" type="TouchScreenButton" parent="."]
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 4 )
+
+[connection signal="finished" from="." to="." method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="volver" to="." method="_on_volver_pressed"]
