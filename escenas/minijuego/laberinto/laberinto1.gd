@@ -17,7 +17,7 @@ func _ready():
 	
 	# Establecer el texto con formato en el RichTextLabel
 	# Establecer el texto con formato en el RichTextLabel
-	var texto1_bbcode = "El porcentaje se basa en una fracción de base 100, por lo que las [b][color=#000000]operaciones[/color][/b] con fracciones permiten calcular y convertir porcentajes de manera efectiva.el ejercicio"
+	var texto1_bbcode = "El porcentaje se basa en una fracción de base 100, por lo que las [b][color=#000000]operaciones[/color][/b] con fracciones permiten calcular y convertir porcentajes de manera efectiva."
 	$mensajes/mensaje1/contenido1/msg1.bbcode_text = texto1_bbcode
 	
 	var texto2_bbcode = "Al [b][color=#000000]comparar[/color][/b] fracciones, se establece una relación entre las partes y el todo, lo que ayuda a comprender la noción de porcentaje."

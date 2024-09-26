@@ -8,7 +8,7 @@ extends VideoPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Sprite.modulate.a = 0.2
+	$Sprite.modulate.a = 0.18
 	
 	pass # Replace with function body.
 

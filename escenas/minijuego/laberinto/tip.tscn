@@ -4,7 +4,7 @@
 [ext_resource path="res://escenas/minijuego/laberinto/globo.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 14 )
+extents = Vector2( 44, 23.5 )
 
 [node name="tip" type="Area2D"]
 script = ExtResource( 1 )
@@ -16,7 +16,7 @@ width = 68
 height = 57
 
 [node name="shape" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 65 )
+position = Vector2( 0, 77.5 )
 shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]

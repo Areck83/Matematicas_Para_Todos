@@ -263,7 +263,7 @@ shape = SubResource( 2 )
 [node name="mensajes" type="Node" parent="."]
 
 [node name="mensaje1" parent="mensajes" instance=ExtResource( 6 )]
-position = Vector2( -360, -102 )
+position = Vector2( -360, -99 )
 width = 500
 height = 300
 
@@ -301,7 +301,7 @@ scroll_active = false
 deselect_on_focus_loss_enabled = false
 
 [node name="mensaje2" parent="mensajes" instance=ExtResource( 6 )]
-position = Vector2( 1355, 334 )
+position = Vector2( 1365, 320 )
 width = 500
 height = 300
 
