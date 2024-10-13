@@ -41,7 +41,7 @@ func _ready():
 	
 	$Panel/Cuadro.visible = false
 	$Panel/Cuadro.visible = true
-	tit.text = "Ejercicio"
+	tit.text = "Lee el ejercicio y marca con una flechita si es correcto o con un tache si es incorrecto."
 	#$volver.visible = false
 	cambiarEjercicio(ejercicio)
 	print("ESTAMOS EN ESTE EJERCICIO: ", ejercicio)

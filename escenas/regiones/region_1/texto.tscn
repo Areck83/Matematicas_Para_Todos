@@ -121,13 +121,14 @@ margin_bottom = 955.0
 custom_styles/panel = SubResource( 23 )
 
 [node name="Mensaje" type="Label" parent="Panel"]
-margin_left = 608.0
-margin_top = 585.0
-margin_right = 1295.0
-margin_bottom = 933.0
+margin_left = 581.0
+margin_top = 542.0
+margin_right = 1199.0
+margin_bottom = 879.0
+rect_scale = Vector2( 1.2, 1.2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 24 )
-text = "CAMBIO"
+text = "Resolviste un problema en el que se hace presente la práctica de repartir, éste ayuda a entender el significado de la fracción como reparto equitativo."
 align = 3
 valign = 1
 autowrap = true

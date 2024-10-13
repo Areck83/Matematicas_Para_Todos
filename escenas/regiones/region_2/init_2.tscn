@@ -53,25 +53,24 @@ scale = Vector2( 0.1119, 0.103804 )
 margin_left = 257.0
 margin_top = 30.0
 margin_right = 1686.0
-margin_bottom = 202.0
+margin_bottom = 243.0
 custom_styles/panel = SubResource( 5 )
 
 [node name="Title" type="Label" parent="Panel/Cuadro"]
 margin_left = 290.0
 margin_top = 42.0
-margin_right = 1607.0
-margin_bottom = 109.0
+margin_right = 1688.0
+margin_bottom = 144.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "Ejercicio
-"
+text = "Lee el ejercicio y marca con una flechita si es correcto o con un tache si es incorrecto."
 autowrap = true
 
 [node name="Texto" type="Label" parent="Panel/Cuadro"]
-margin_left = 295.0
-margin_top = 76.0
-margin_right = 1638.0
-margin_bottom = 141.0
+margin_left = 292.0
+margin_top = 93.0
+margin_right = 1635.0
+margin_bottom = 158.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "TEXTO"
@@ -94,7 +93,7 @@ scale = Vector2( 0.785123, 0.786259 )
 normal = ExtResource( 3 )
 
 [node name="EjercicioT1" type="Sprite" parent="Panel"]
-position = Vector2( 980, 590.5 )
+position = Vector2( 984, 639 )
 scale = Vector2( 2.32843, 2.35127 )
 texture = ExtResource( 5 )
 

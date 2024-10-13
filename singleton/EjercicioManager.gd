@@ -209,7 +209,7 @@ func escenaEjercicioRegion2(numero_ejercicio, ejercicioT1):
 	match numero_ejercicio:
 		1:
 			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
-			mensaje_correcto = "Para resolver un problema de proporcionalidad puedes aplicar la regla de tres, estableciendo relaciones entre las cantidades que se relacionan proporcionalmente"
+			mensaje_correcto = "Resolviste un problema de proporcionalidad a través de la estimación y comparación de diversas cantidades para hacer predicciones."
 			dialogo = ["En una finca de café, se ha observado que, si se siembran 1000 plantas de café, se obtienen 500 kg café. ¿Cuántos kilogramos de café se obtendrían si se siembran 2500 plantas de café?"]
 			respuesta = true
 			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta1.png"
@@ -239,7 +239,7 @@ func escenaEjercicioRegion2(numero_ejercicio, ejercicioT1):
 			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta12.png"
 		6:
 			mensaje_incorrecto = "VAMOS PUEDES HACERLO MEJOR"
-			mensaje_correcto = "EXCELENTE SIGUE ASI"
+			mensaje_correcto = "Identificaste que para resolver un problema de proporcionalidad se debe realizar un análisis preciso y tomar en cuenta una selección inicial."
 			dialogo = ["Se ha detectado que, en un lote de café de la feria, hay 5 bolsas con café Arábigo, 3 bolsas con café Robusta y 2 bolsas con café caturra. Si se sabe que al menos una de las bolsas extraídas es de café arábigo ¿cuál es la probabilidad expresada en fracciones de obtener dos bolsas de café arábigo?"]
 			respuesta = true
 			ruta_tarjeta1 = "res://recursos/imagenes/reg2/tarjetas/tarjeta13.png"
