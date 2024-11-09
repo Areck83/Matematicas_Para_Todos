@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://recursos/sonidos/musica/Menú pricipal (Home)/HOME 2.mp3" type="AudioStream" id=1]
+
+[node name="SongCredits" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )

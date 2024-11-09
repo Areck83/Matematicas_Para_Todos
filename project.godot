@@ -45,6 +45,7 @@ Song3="*res://escenas/regiones/region_3/song3.tscn"
 Inicio="*res://escenas/inicio/Inicio.tscn"
 Song1="*res://escenas/regiones/region_1/song1.tscn"
 StatusEscena="*res://singleton/StatusEscena.gd"
+CreditsSong="*res://recursos/video/CreditsSong.tscn"
 
 [display]
 

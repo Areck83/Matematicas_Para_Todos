@@ -55,6 +55,7 @@ func _columnas_para_cartas(carta: int) -> int:
 		_: return 4
 
 func init_game():
+	$Cuadro.visible = false
 	cantidad_cartas = cantidad_actual * 2 # Para que cada uno tenga su par
 	var columnas: int = _columnas_para_cartas(cantidad_cartas)
 	var filas : int = ceil(float(cantidad_cartas) / float(columnas))

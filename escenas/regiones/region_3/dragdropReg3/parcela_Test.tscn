@@ -24,13 +24,13 @@
 [ext_resource path="res://recursos/imagenes/reg3/Red3.png" type="Texture" id=22]
 [ext_resource path="res://recursos/imagenes/icon_Menu.png" type="Texture" id=23]
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="DynamicFontData" id=3]
 font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-SemiBold.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 size = 60
 outline_color = Color( 0.25098, 0.0156863, 0.0156863, 1 )
-font_data = SubResource( 1 )
+font_data = SubResource( 3 )
 
 [node name="Parcela_Test" type="Node2D"]
 script = ExtResource( 7 )
@@ -159,7 +159,10 @@ margin_right = 1056.44
 margin_bottom = 151.25
 custom_colors/font_color = Color( 0.360784, 0.00784314, 0.00784314, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Desafio de conexiones"
+text = "Desafío de conexiones"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="volver" type="TouchScreenButton" parent="."]
 position = Vector2( 37, 23 )

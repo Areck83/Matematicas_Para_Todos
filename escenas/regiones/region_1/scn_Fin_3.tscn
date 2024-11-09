@@ -70,8 +70,8 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/bold_font = SubResource( 6 )
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
-bbcode_text = "Acabs de resolver un [b]problema[/b] en el que se hace presente la práctica de [b]medir[/b], éste ayuda a entender el significado de la [b]fracción[/b] como [b]medida[/b]. "
-text = "Acabs de resolver un problema en el que se hace presente la práctica de medir, éste ayuda a entender el significado de la fracción como medida. "
+bbcode_text = "Acabas de resolver un [b]problema[/b] en el que se hace presente la práctica de [b]medir[/b], éste ayuda a entender el significado de la [b]fracción[/b] como [b]medida[/b]. "
+text = "Acabas de resolver un problema en el que se hace presente la práctica de medir, éste ayuda a entender el significado de la fracción como medida. "
 fit_content_height = true
 scroll_active = false
 

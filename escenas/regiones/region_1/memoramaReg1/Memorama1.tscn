@@ -79,7 +79,7 @@ margin_right = 1522.0
 margin_bottom = 151.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
-text = "En esta sección del memorama, empareja la acción con un ejemplo de cómo se realiza una operación con fracciones."
+text = "En esta sección del memorama, empareja la acción con un ejemplo de cómo se realiza una operación con fracciones. Si la pareja es correcta quedará volteada."
 autowrap = true
 
 [node name="volver" type="TouchScreenButton" parent="."]

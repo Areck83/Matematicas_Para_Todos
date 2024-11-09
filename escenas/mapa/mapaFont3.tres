@@ -3,8 +3,8 @@
 [ext_resource path="res://recursos/fuentes/grandstander_Static/Grandstander-SemiBold.ttf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
-size = 30
-outline_size = 4
+size = 150
+outline_size = 12
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 

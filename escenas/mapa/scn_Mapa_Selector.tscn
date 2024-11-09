@@ -1,13 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://escenas/mapa/img_Mapa_Niveles.png" type="Texture" id=1]
 [ext_resource path="res://recursos/botones/region_Button/btn_Region.tscn" type="PackedScene" id=2]
 [ext_resource path="res://escenas/mapa/spt_Mapa_Selector.gd" type="Script" id=3]
-[ext_resource path="res://recursos/imagenes/botones/btn_Ancho.png" type="Texture" id=4]
+[ext_resource path="res://escenas/mapa/mapaFont3.tres" type="Theme" id=4]
 [ext_resource path="res://recursos/imagenes/img_Capital_Active.png" type="Texture" id=5]
 [ext_resource path="res://recursos/imagenes/img_Capital_Inactive.png" type="Texture" id=6]
 [ext_resource path="res://recursos/imagenes/reg1/img_Huasteca_Active.png" type="Texture" id=7]
 [ext_resource path="res://recursos/imagenes/img_Sotavento_Active.png" type="Texture" id=8]
+[ext_resource path="res://recursos/imagenes/reg1/btn_bkd_respuestas2.png" type="Texture" id=9]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.427451, 0.588235, 0.266667, 1 )
@@ -75,8 +76,16 @@ d = 3
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2( 51.0001, 918 )
-scale = Vector2( 0.315547, 0.376437 )
-normal = ExtResource( 4 )
+position = Vector2( 38, 955 )
+scale = Vector2( 0.271389, 0.396552 )
+normal = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="TouchScreenButton"]
+margin_left = 51.5865
+margin_top = 58.0
+margin_right = 653.586
+margin_bottom = 218.0
+theme = ExtResource( 4 )
+text = "Créditos"
 
 [connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]

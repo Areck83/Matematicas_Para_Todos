@@ -118,7 +118,7 @@ func EjercicioRegion3(numero_ejercicio):
 		4:
 			ejercicio = "Ejercicio 2.1"
 			respuesta = true
-			dialogo = ["Los pescadores de un pueblo del sotavento obtuvieron 1/2 de tonelada de pescado un lunes. De ese total, 5/6 fue apto...",
+			dialogo = ["Los pescadores de un pueblo del sotavento obtuvieron 1/2 de tonelada de pescado un lunes. De ese total, 5/6 fue apto para la venta...",
 			"¿Qué fracción de la media tonelada representa la producción en venta?."]
 			mensaje_correcto = "Lograste identificar que la multiplicación de fracciones se resuelve correctamente multiplicando numerador por numerador y denominador por denominador de ambas fracciones."
 			mensaje_incorrecto = "¡Animo!  Sé que puedes hacerlo mejor. No te desanimes, ¡sigue intentándolo! "
@@ -144,7 +144,7 @@ func EjercicioRegion3(numero_ejercicio):
 			respuesta = true
 			dialogo = ["En la feria gastronómica, realizada en el Puerto de Veracruz, durante semana santa, 3/5 de cada 20 asistentes mencionaron como platillo favorito...",
 			"el chilpachole de camarone. Entonces por cada 20 persona, ¿qué cantidad de asistentes prefieren el chilpachole de camarón?."]
-			mensaje_correcto = "Lograste identificar que para resolver una multiplicación de fracciones con un numero natural debes convertir el número natural a fracción, y escribir el número natural como numerador y su valor posicional (1) como denominador."
+			mensaje_correcto = "Lograste identificar que para resolver una multiplicación de fracciones con un número natural debes convertir el número natural a fracción, y escribir el número natural como numerador y su valor posicional (1) como denominador."
 			mensaje_incorrecto = "¡Animo!  Sé que puedes hacerlo mejor. No te desanimes, ¡sigue intentándolo! "
 
 		8:
@@ -160,7 +160,7 @@ func EjercicioRegion3(numero_ejercicio):
 			respuesta = false
 			dialogo = ["En la feria gastronómica, realizada en el Puerto de Veracruz, durante semana santa, 3/5 de cada 20 asistentes mencionaron como platillo favorito...",
 				  "el chilpachole de camarone. Entonces por cada 20 persona, ¿qué cantidad de asistentes prefieren el chilpachole de camarón?."]
-			mensaje_correcto = "El procedimiento de este ejercicio es incorrecto, al convertir el numero natural en fracción decimal, para poder multiplicar las dos fracciones mencionadas en el planeamiento inicial. "
+			mensaje_correcto = "El procedimiento de este ejercicio es incorrecto, al convertir el número natural en fracción decimal, para poder multiplicar las dos fracciones mencionadas en el planeamiento inicial. "
 			mensaje_incorrecto = "¡Animo!  Sé que puedes hacerlo mejor. No te desanimes, ¡sigue intentándolo! "
 
 		10:

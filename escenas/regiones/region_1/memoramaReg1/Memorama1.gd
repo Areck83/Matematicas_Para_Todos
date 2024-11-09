@@ -143,4 +143,5 @@ func change_scene():
 	GlobalVar.reg1_escena2 = false
 	GlobalVar.reg1_escena3 = false
 	GlobalVar.reg1_escena4 = false
+	yield(get_tree().create_timer(1.5), "timeout")
 	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")  # Cambia la escena

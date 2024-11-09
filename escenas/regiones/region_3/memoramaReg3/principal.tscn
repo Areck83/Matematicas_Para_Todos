@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://escenas/regiones/region_3/memoramaReg3/principal.gd" type="Script" id=1]
 [ext_resource path="res://recursos/imagenes/reg3/bkd_Sostavento_Dim.png" type="Texture" id=2]
 [ext_resource path="res://recursos/imagenes/botones/btn_Ancho.png" type="Texture" id=3]
 [ext_resource path="res://escenas/datos/themes/formularioTheme.tres" type="Theme" id=4]
+[ext_resource path="res://entidades/zorro/cara_zorro.tscn" type="PackedScene" id=5]
+[ext_resource path="res://recursos/imagenes/indicadores/dialog_Planteamiento.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://recursos/fuentes/montserrat_Static/Montserrat-SemiBold.ttf"
@@ -38,23 +40,38 @@ content_margin_bottom = 7.0
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 1087, 348 )
 
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 3896, 541 )
+
+[sub_resource type="DynamicFontData" id=11]
+hinting = 1
+font_path = "res://recursos/fuentes/grandstander_Static/Grandstander-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 36
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = SubResource( 11 )
+
 [node name="principal" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 965, 548 )
+position = Vector2( -1478, 100 )
 scale = Vector2( 1.00365, 1.00648 )
 texture = ExtResource( 2 )
+offset = Vector2( 2434.12, 445.116 )
 
 [node name="btn_jugar" type="Button" parent="."]
 anchor_left = 0.521
 anchor_top = 0.515
 anchor_right = 0.521
 anchor_bottom = 0.515
-margin_left = 435.0
-margin_top = 424.0
-margin_right = 1473.0
-margin_bottom = 738.0
+margin_left = 450.0
+margin_top = 467.0
+margin_right = 1488.0
+margin_bottom = 781.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 6 )
 custom_styles/pressed = SubResource( 8 )
@@ -98,5 +115,29 @@ margin_right = 1895.0
 margin_bottom = 100.0
 theme = ExtResource( 4 )
 text = "Juego completado! Cargando..."
+
+[node name="Cuadro" type="CanvasLayer" parent="."]
+
+[node name="AnimatedSprite" parent="Cuadro" instance=ExtResource( 5 )]
+position = Vector2( 1727, 203 )
+scale = Vector2( 0.219436, 0.192599 )
+
+[node name="Fondo" type="Panel" parent="Cuadro"]
+margin_left = 113.0
+margin_top = 30.0
+margin_right = 1542.0
+margin_bottom = 304.0
+custom_styles/panel = SubResource( 12 )
+
+[node name="Texto" type="Label" parent="Cuadro"]
+margin_left = 160.0
+margin_top = 78.0
+margin_right = 1387.0
+margin_bottom = 495.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Resuelve el siguiente memorama, encuentra todos los pares de cartas iguales. Al descubrir una pareja aparecerá un ejercicio con su procedimiento. Selecciona la cruz color rojo si el procedimiento es incorrecto o la palomita verde si es correcto."
+align = 3
+autowrap = true
 
 [connection signal="pressed" from="btn_jugar" to="." method="_on_btn_jugar_pressed"]

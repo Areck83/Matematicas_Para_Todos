@@ -65,7 +65,7 @@ margin_top = 655.0
 margin_right = 1643.0
 margin_bottom = 845.0
 theme = ExtResource( 7 )
-text = "Preparate para meterte al agua y salvar especies endémicas"
+text = "Prepárate para meterte al agua y salvar especies endémicas"
 
 [node name="aaaaaaaaa" type="RichTextLabel" parent="."]
 margin_left = 1256.0

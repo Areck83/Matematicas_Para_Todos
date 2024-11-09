@@ -34,6 +34,7 @@ func contarDrags():
 		GlobalVar.finalMemo = true
 		print ("Este es el valor de ejercicio TARJETTAS: ", GlobalVar.ejercicioTarjetas)
 		Song3.stop()
+		Inicio.play()
 		get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 
 func volver():

@@ -13,5 +13,6 @@ func alakazam(w):
 
 
 func _on_TouchScreenButton_pressed():
+	Inicio.stop()
 	get_tree().change_scene("res://recursos/video/VideoPlayer.tscn")
 	pass # Replace with function body.

@@ -8,6 +8,7 @@ extends VideoPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	CreditsSong.play()
 	$Sprite.modulate.a = 0.18
 	
 	pass # Replace with function body.
@@ -24,5 +25,7 @@ func _on_VideoPlayer_finished():
 
 
 func _on_volver_pressed():
+	CreditsSong.stop()
+	Inicio.play()
 	get_tree().change_scene("res://escenas/mapa/scn_Mapa_Selector.tscn")
 	pass # Replace with function body.
